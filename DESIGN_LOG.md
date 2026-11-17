@@ -42,8 +42,34 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Choice:** the board never connects to mains. Current is measured with split-core CT clamps only.
 - **Status:** Decided 2026-11-16
 
+## D-008: Demo machine
+- **Choice:** an AC box or pedestal fan, with a small weight taped on one blade to create imbalance on demand.
+- **Reason:** cheap, safe, easy to fault on purpose, and low current, so a small clamp sensor works. It gives healthy and faulty data for the analysis and ML add-ons. Input ranges are sized so a pump can be monitored later.
+- **Safety:** measure current with a commercial line-splitter cord and a split-core clamp so no mains wire is cut or exposed.
+- **Status:** Decided 2026-11-16
+
+## D-009: Sensing parts
+- **Vibration:** LSM6DSO. Accelerometer output rate up to 6.66 kHz covers fan vibration.
+- **Current:** ADS131M04, four simultaneous channels, three used for CT clamps and one spare.
+- **Status:** Decided 2026-11-16. See `docs/PARTS.md` for the facts checked.
+
+## D-010: Power architecture
+- **Choice:** 9 to 36 V in, LMR36015 buck to 5 V, then three step-down converters for the FPGA's 1.0 V, 1.8 V and 3.3 V rails with enable chaining for sequencing.
+- **Reason:** LMR36015 accepts up to 60 V with transient tolerance, so the 9 to 36 V input has margin. Discrete converters make the sequencing visible and measurable, which is the point of add-on H2.
+- **Open:** exact converter for the three rails, and the recommended power-on order from the FPGA datasheet.
+- **Status:** Decided, with open items
+
+## D-011: Industrial interfaces
+- **Choice:** RS-485 with THVD14xx and CAN FD with TCAN1042 family. The CAN controller is built in RTL on the FPGA.
+- **Status:** Decided 2026-11-16, exact variants to pick in Phase 2
+
+## Open decisions
+
+- **O-1:** onboard USB-JTAG and UART bridge (more parts, but you only need a USB-C cable) or a JTAG header with an external programmer (simpler board, but you must buy a programmer). Recommended: onboard.
+
 ## Change history
 
 | Date | Change |
 |------|--------|
 | 2026-11-16 | New log started for the 4-layer scope, D-001 to D-007. Old log archived. |
+| 2026-11-16 | Phase 1 part selection: D-008 to D-011 and docs/PARTS.md added. |
