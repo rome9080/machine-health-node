@@ -19,11 +19,12 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Status:** Decided
 
 ## D-004: FPGA family
-- **Candidate:** AMD Spartan-7 XC7S25 in CSGA225 (0.8 mm pitch). verify package and pitch.
+- **Choice:** AMD Spartan-7 XC7S25-1CSGA225C (commercial, 0 to 85 C) for the first prototype. An industrial-grade -1CSGA225I exists in the same 225-ball package.
 - **Fallback:** Lattice iCE40UP5K in QFN-48, used only if the Spartan-7 cannot be sourced.
-- **Reason for the main choice:** 0.8 mm pitch is a standard BGA pitch used for FPGAs, so a 4-layer board can fan it out and an assembly service can place it.
-- **Open:** confirm the part is in the assembler's library or can be consigned.
-- **Status:** Proposed
+- **Checked 2026-11-16 against distributor listings:** 225-ball CSGA, 13 x 13 mm, 150 I/O, 23,360 logic cells, status Active. VCCINT 0.95 to 1.05 V for -1 devices, VCCAUX 1.71 to 1.89 V. Each rail must ramp from 0 V to 90 percent in 0.2 to 50 ms. In stock at Digi-Key and LCSC, but stock and price vary by region and day (about $16 at LCSC to about 36 to 41 EUR at Digi-Key).
+- **Still to verify:** 0.8 mm ball pitch (package guide UG475), recommended power-on order (DS189), and whether the part is in the assembler's parts library or must be consigned.
+- **Power design references:** TI reference design TIDUE63 and the Renesas Spartan-7 power application note PM-096.
+- **Status:** Part chosen, verification items open
 
 ## D-005: Assembly route
 - **Options:** hand or home reflow, or a PCB assembly service
