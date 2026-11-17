@@ -63,9 +63,21 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Choice:** RS-485 with THVD14xx and CAN FD with TCAN1042 family. The CAN controller is built in RTL on the FPGA.
 - **Status:** Decided 2026-11-16, exact variants to pick in Phase 2
 
+## D-012: Onboard USB programmer (was O-1)
+- **Choice:** USB-C with an onboard USB-JTAG and UART bridge.
+- **Reason:** more parts, but only a USB-C cable is needed, no separate programmer to buy.
+- **Status:** Decided 2026-11-16
+
+## D-013: Verification of the FPGA (closes the open items in D-004)
+- **Ball pitch:** CSGA225 is 13 x 13 mm at 0.8 mm pitch, per the 7 series selection guide.
+- **Power-on order:** VCCINT, VCCBRAM, VCCAUX, then VCCO, with power-off in reverse (DS189). VCCINT and VCCBRAM share the 1.0 V rail. VCCAUX (1.8 V) and VCCO (3.3 V) differ, so they stay separate rails.
+- **Assembler:** JLCPCB. LCSC lists XC7S25-1CSGA225C as C1521699 and marks it a JLCPCB extended part. Stock figures conflict between pages, so confirm at order time and keep the consign route as a fallback.
+- **Open:** the industrial XC7S25-1CSGA225I is listed at a similar price. Decide in Phase 2 whether to use it.
+- **Status:** Decided 2026-11-16, stock to recheck at order time
+
 ## Open decisions
 
-- **O-1:** onboard USB-JTAG and UART bridge (more parts, but you only need a USB-C cable) or a JTAG header with an external programmer (simpler board, but you must buy a programmer). Recommended: onboard.
+- None blocking Phase 1.
 
 ## Change history
 
