@@ -91,7 +91,7 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Choice:** fuse F1 (2 A), bidirectional TVS D1 (SMBJ36CA class), P-channel MOSFET Q1 for reverse-polarity protection, gate resistor R1 100 k to ground, 12 V Zener D2 between gate and source, 10 uF 50 V input capacitor.
 - **Reason:** the TVS is bidirectional so a reversed supply cannot short through it. The Zener keeps the gate-source voltage inside the MOSFET's limit at 36 V in. Q1's drain faces the input and its source faces the load, so the body diode conducts only when polarity is right.
 - **Checked:** ERC clean. Connectivity read from the saved schematic file.
-- **Open:** pick Q1 with a Vds rating that clears the TVS clamping voltage, confirm its on-resistance at the gate voltage the circuit gives at 9 V in, fix three wrong footprints (F1, Q1, PWR_FLAG).
+- **Open:** pick Q1 with a Vds rating that clears the TVS clamping voltage, confirm its on-resistance at the gate voltage the circuit gives at 9 V in. Footprint fields cleared 2026-11-17; real ones are assigned in Phase 3.
 - **Status:** Drawn 2026-11-17, review items open
 
 ## Open decisions

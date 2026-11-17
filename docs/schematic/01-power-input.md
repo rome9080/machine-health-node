@@ -34,4 +34,4 @@ Send me the sheet when done. I'll review it before we do sheet 2 (FPGA rails wit
 
 Drawn in KiCad 10 and checked: ERC clean (0 errors, 0 warnings). Q1 has its drain on the fuse side and its source on the load side. D2 (12 V Zener) has its anode on the gate node and its cathode on VIN. R1 is 100 k from gate to ground, F1 is 2 A, C1 is 10 uF 50 V as a placeholder until the buck design sets the input capacitors.
 
-Open on this sheet: three symbols carry wrong footprints (F1, Q1 and the PWR_FLAG). Clear these in the schematic and assign real footprints in Phase 3 preparation.
+Footprints: cleared on all symbols (2026-11-17). Real footprints are assigned in Phase 3 preparation.

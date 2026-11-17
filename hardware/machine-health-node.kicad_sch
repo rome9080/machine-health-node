@@ -1547,16 +1547,16 @@
 		(uuid "8e75ffab-448c-4a12-af19-f86cece2cc22")
 	)
 	(junction
+		(at 134.62 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c42842df-cd96-4ab5-a0d0-28e555ec9e45")
+	)
+	(junction
 		(at 110.49 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6d974e1-3520-4a55-afe4-f002f7a11292")
-	)
-	(junction
-		(at 135.89 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "daf52668-aa52-4391-9e9a-eec74749d7cb")
 	)
 	(wire
 		(pts
@@ -1600,6 +1600,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 80.01) (xy 137.16 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3fb77d9b-9fe5-49da-ad00-faf63204923a")
+	)
+	(wire
+		(pts
 			(xy 120.65 91.44) (xy 120.65 88.9)
 		)
 		(stroke
@@ -1620,16 +1630,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 74.93) (xy 135.89 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e8b5d04-765f-4cd9-8579-ca8609603722")
-	)
-	(wire
-		(pts
 			(xy 120.65 88.9) (xy 120.65 87.63)
 		)
 		(stroke
@@ -1637,6 +1637,16 @@
 			(type default)
 		)
 		(uuid "6ed66f32-da14-40d3-84f1-56a387049dba")
+	)
+	(wire
+		(pts
+			(xy 134.62 72.39) (xy 134.62 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d68321a-40a0-4bbc-bde8-8e625b007826")
 	)
 	(wire
 		(pts
@@ -1660,17 +1670,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 80.01) (xy 135.89 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfc50571-fb14-48f0-8c74-c638e159dc0d")
-	)
-	(wire
-		(pts
-			(xy 132.08 80.01) (xy 135.89 80.01)
+			(xy 132.08 80.01) (xy 134.62 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1871,84 +1871,6 @@
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 135.89 74.93 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3284aef3-65b6-4ee4-bc0c-af042bb97478")
-		(property "Reference" "#FLG01"
-			(at 135.89 73.025 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 135.89 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-24_W7.62mm"
-			(at 135.89 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 135.89 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "21f4de84-ccfc-4c90-b2f6-52cb0605792e")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
-					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -2352,6 +2274,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 134.62 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9187f5c1-23c7-4fbd-a341-b6d98599e7b5")
+		(property "Reference" "#FLG03"
+			(at 134.62 70.485 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 134.62 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 134.62 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "85eb68e9-f2b8-4689-a250-4b2087a51a07")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 120.65 101.6 0)
 		(unit 1)
@@ -2441,7 +2441,7 @@
 		(dnp no)
 		(uuid "98d23167-92b8-4829-8f19-92d891dd9c76")
 		(property "Reference" "Q1"
-			(at 120.65 73.66 90)
+			(at 120.396 73.66 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2460,7 +2460,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
+		(property "Footprint" ""
 			(at 118.11 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -2543,7 +2543,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_LCC:PLCC-84_29.3x29.3mm_P1.27mm"
+		(property "Footprint" ""
 			(at 102.87 81.788 90)
 			(hide yes)
 			(show_name no)
