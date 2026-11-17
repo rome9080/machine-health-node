@@ -87,6 +87,13 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **ADC:** ADS131M04 stays. Its sample rate is far above the few kSPS needed, so the datasheet revision question no longer matters.
 - **Status:** Decided 2026-11-16
 
+## D-016: Sheet 1 power input front end
+- **Choice:** fuse F1 (2 A), bidirectional TVS D1 (SMBJ36CA class), P-channel MOSFET Q1 for reverse-polarity protection, gate resistor R1 100 k to ground, 12 V Zener D2 between gate and source, 10 uF 50 V input capacitor.
+- **Reason:** the TVS is bidirectional so a reversed supply cannot short through it. The Zener keeps the gate-source voltage inside the MOSFET's limit at 36 V in. Q1's drain faces the input and its source faces the load, so the body diode conducts only when polarity is right.
+- **Checked:** ERC clean. Connectivity read from the saved schematic file.
+- **Open:** pick Q1 with a Vds rating that clears the TVS clamping voltage, confirm its on-resistance at the gate voltage the circuit gives at 9 V in, fix three wrong footprints (F1, Q1, PWR_FLAG).
+- **Status:** Drawn 2026-11-17, review items open
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -98,3 +105,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-16 | New log started for the 4-layer scope, D-001 to D-007. Old log archived. |
 | 2026-11-16 | Phase 1 part selection: D-008 to D-011 and docs/PARTS.md added. |
 | 2026-11-16 | D-012 to D-015: programmer, FPGA verification, assembler, rails, bus parts. Phase 1 closed. |
+| 2026-11-17 | D-016: schematic sheet 1 (power input front end) drawn and committed. |
