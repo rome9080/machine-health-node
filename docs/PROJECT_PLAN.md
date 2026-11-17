@@ -12,7 +12,7 @@ Unplanned machine downtime is expensive, and most failures (worn bearings, imbal
 
 | Block | Candidate | Notes |
 |-------|-----------|-------|
-| FPGA | AMD Spartan-7 XC7S25, CSGA225 (0.8 mm BGA) | Fallback: Lattice iCE40UP5K in QFN-48 if BGA assembly is not realistic |
+| FPGA | AMD Spartan-7 XC7S25, CSGA225 (0.8 mm BGA) | Placed by the assembly service. Fallback only if the part is unobtainable: Lattice iCE40UP5K in QFN-48 |
 | Configuration | QSPI flash plus JTAG header | |
 | FPGA rails | 1.0 V core, 1.8 V aux, 3.3 V I/O | Needs sequencing, check the datasheet |
 | Input power | 9 to 36 V DC | Reverse-polarity protection, TVS, buck converter |
@@ -60,14 +60,14 @@ Each add-on is a self-contained deliverable that also speaks to a group of emplo
 
 ## Risks
 
-- **Assembly:** BGA and QFN parts are not realistic with an iron. Options are hot-air or hot-plate reflow with a stencil, paying a service to assemble the hard parts, or the iCE40 fallback.
+- **Assembly (decided):** a PCB assembly service places the parts, because hand-soldering is out. JLCPCB and PCBWay both advertise BGA assembly and accept customer-supplied (consigned) parts. If the FPGA is not in the assembler's parts library, buy it from a reputable distributor and consign it, since assemblers do not test consigned parts. Confirm availability before committing to the part.
 - **Cost:** roughly $150 to $300 all-in with assembly (estimate, to be verified before buying).
 - **Scope:** too many add-ons can sink the project. Tier 1 comes first, and every add-on has to produce something measurable.
 
 ## Open questions
 
-- Which exact companies is Roman applying to? The add-on list above targets common employers found in job postings and should be retargeted to the real list.
-- Assembly route and budget.
+- Company list: settled. The employers in the add-on table are the targets.
+- Budget approval before ordering, and which assembler (JLCPCB or PCBWay), to be chosen during part selection.
 
 ## Sources
 

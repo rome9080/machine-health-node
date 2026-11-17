@@ -20,13 +20,16 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 
 ## D-004: FPGA family
 - **Candidate:** AMD Spartan-7 XC7S25 in CSGA225 (0.8 mm pitch). verify package and pitch.
-- **Fallback:** Lattice iCE40UP5K in QFN-48, which is hand-solderable with hot air.
-- **Open:** depends on the assembly route (D-005).
-- **Status:** Open
+- **Fallback:** Lattice iCE40UP5K in QFN-48, used only if the Spartan-7 cannot be sourced.
+- **Reason for the main choice:** 0.8 mm pitch is a standard BGA pitch used for FPGAs, so a 4-layer board can fan it out and an assembly service can place it.
+- **Open:** confirm the part is in the assembler's library or can be consigned.
+- **Status:** Proposed
 
 ## D-005: Assembly route
-- **Options:** reflow with stencil and hot plate or hot air, pay a service for the BGA and QFN parts only, or use the iCE40 fallback and hand-solder
-- **Status:** Open, needs user input on budget and tools
+- **Options:** hand or home reflow, or a PCB assembly service
+- **Choice:** assembly service (JLCPCB or PCBWay). Hand-soldering is not possible for this build.
+- **Reason:** both services advertise BGA assembly and accept consigned parts. Final pick between them is made at part selection, based on FPGA availability and total cost.
+- **Status:** Decided 2026-11-16
 
 ## D-006: Add-on strategy
 - **Choice:** hardware add-ons (power input, current channel, buses, test access) all go on the first board revision. Software and process add-ons are built in tiers.
