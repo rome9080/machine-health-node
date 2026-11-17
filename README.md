@@ -16,8 +16,8 @@ Full scope, parts, add-ons and phases are in [docs/PROJECT_PLAN.md](docs/PROJECT
 | Phase | State |
 |-------|-------|
 | 0. Scope and plan | Done |
-| 1. Architecture and part selection | In progress |
-| 2. Schematic | Not started |
+| 1. Architecture and part selection | Done (final BOM costing happens in Phase 4) |
+| 2. Schematic | Next |
 | 3. Layout | Not started |
 | 4. Fabrication | Not started |
 | 5. RTL, firmware, software | Not started |

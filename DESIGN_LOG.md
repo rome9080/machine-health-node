@@ -75,9 +75,21 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** the industrial XC7S25-1CSGA225I is listed at a similar price. Decide in Phase 2 whether to use it.
 - **Status:** Decided 2026-11-16, stock to recheck at order time
 
+## D-014: Rail converters
+- **Choice:** TI TPS62067 for each of the 1.0 V, 1.8 V and 3.3 V rails, fed from the 5 V rail. Each has an enable pin and an open-drain power-good output, so the power-good of one rail enables the next (1.0 V, then 1.8 V, then 3.3 V), matching the order in D-013.
+- **Checked:** input range 2.9 to 6 V, 2 A, 3 MHz, power-good output, LCSC part C7098.
+- **Open:** confirm 1.0 V and 1.8 V load currents once the FPGA design size is known (power estimator, Phase 5).
+- **Status:** Decided 2026-11-16
+
+## D-015: Bus transceiver variants
+- **RS-485:** THVD1410, the 500 kbps low-EMI speed grade. Modbus RTU runs far below that. THVD1450 (50 Mbps) is the fallback.
+- **CAN FD:** TCAN1042VDRQ1 (SOIC-8, 2 Mbps CAN FD, VIO pin so it takes 3.3 V logic from the FPGA, 5 V supply). LCSC C485806, a JLCPCB extended part.
+- **ADC:** ADS131M04 stays. Its sample rate is far above the few kSPS needed, so the datasheet revision question no longer matters.
+- **Status:** Decided 2026-11-16
+
 ## Open decisions
 
-- None blocking Phase 1.
+- None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
 
 ## Change history
 
@@ -85,3 +97,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 |------|--------|
 | 2026-11-16 | New log started for the 4-layer scope, D-001 to D-007. Old log archived. |
 | 2026-11-16 | Phase 1 part selection: D-008 to D-011 and docs/PARTS.md added. |
+| 2026-11-16 | D-012 to D-015: programmer, FPGA verification, assembler, rails, bus parts. Phase 1 closed. |
