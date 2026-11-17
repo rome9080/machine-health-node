@@ -1,38 +1,32 @@
-# Sensor Node PCB
+# Industrial Machine Health Node
 
-A wireless vibration and temperature sensor node on a custom 2-layer PCB, designed in KiCad. The board is a battery-powered node that reads an IMU and a temperature sensor and reports over Bluetooth LE, intended for simple machine condition monitoring.
+A 4-layer PCB that monitors the health of a machine (motor, pump, fan) by analysing vibration and motor current on-device. An FPGA running my own RISC-V CPU does the processing, and results go out over BLE, RS-485 (Modbus) or USB to a small software stack.
 
-The goal of this project is to show the full design-to-board process: requirements, part selection, schematic, layout, fabrication, bring-up, and measurement. Every non-obvious choice is recorded in [DESIGN_LOG.md](DESIGN_LOG.md).
+Full scope, parts, add-ons and phases are in [docs/PROJECT_PLAN.md](docs/PROJECT_PLAN.md). Design decisions are logged in [DESIGN_LOG.md](DESIGN_LOG.md).
 
-## Design summary
+## Highlights
 
-| Block | Part |
-|-------|------|
-| Microcontroller | ESP32-C3-MINI-1 module (BLE, native USB) |
-| Motion sensor | LSM6DSO IMU |
-| Temperature sensor | TMP102 |
-| Battery charger | MCP73831, charges a single-cell LiPo over USB-C |
-| 3.3 V regulator | TLV75733P, chosen for low quiescent current |
-| Battery | 3.7 V LiPo, about 500 mAh |
-
-Targets: board size 40 x 30 mm, whole-board sleep current under 50 uA, at least 7 days of battery life at one reading per minute. Hand-assembled.
+- 4-layer board: AMD Spartan-7 FPGA (BGA), multi-rail power from a 9 to 36 V input, USB, RS-485, CAN FD
+- Runs my own 32-bit RISC-V core (see [riscv-cpu](https://github.com/rome9080/riscv-cpu))
+- Vibration and motor-current analysis on the device
+- Add-ons: signal integrity, design for manufacture, bare-metal C toolchain, edge ML, telemetry dashboard, CI pipeline, requirements traceability
 
 ## Status
 
 | Phase | State |
 |-------|-------|
-| 1. Plan (requirements, parts, design log) | Done |
+| 0. Scope and plan | In progress |
+| 1. Architecture and part selection | Not started |
 | 2. Schematic | Not started |
 | 3. Layout | Not started |
-| 4. Fabricate | Not started |
-| 5. Bring-up and measurements | Not started |
-| 6. Documentation | Not started |
+| 4. Fabrication | Not started |
+| 5. RTL, firmware, software | Not started |
+| 6. Bring-up | Not started |
+| 7. Testing and write-up | Not started |
 
 ## Repository layout
 
-- `DESIGN_LOG.md`: requirements, parts shortlist, and the decision log
-- KiCad project files will be added in Phase 2
-
-## Tools
-
-KiCad for schematic and layout. Firmware will be a short BLE sketch for the ESP32-C3.
+- `docs/PROJECT_PLAN.md`: scope, add-ons, phases, risks
+- `DESIGN_LOG.md`: decision log
+- `docs/archive/`: the earlier 2-layer sensor-node concept
+- Hardware, RTL, firmware and software folders will be added as each phase starts
