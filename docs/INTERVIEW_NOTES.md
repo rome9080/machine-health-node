@@ -30,3 +30,10 @@ They come from TI's validated 5 V design table (24 V input example). Be ready to
 
 **Why is EN tied to VIN?**
 The datasheet allows EN to connect directly to VIN, so the converter starts whenever power is applied. Simple, no extra parts.
+
+**Why did ERC flag VCC and SW, and what did you do?**
+TI's symbol types VCC and SW as power inputs, so ERC reported that nothing drives them. In reality the chip drives both (VCC is its internal supply, SW its switching output). I checked the datasheet to confirm, then put a PWR_FLAG on each net. A cleaner fix is to edit the symbol's pin types.
+
+**What are the remaining ERC warnings?**
+No footprint library yet (assigned in Phase 3), and unspecified pin types on BST and NC. NC is joined to SW on purpose because the datasheet asks for it. I reviewed each warning and left the ones that are expected.
+

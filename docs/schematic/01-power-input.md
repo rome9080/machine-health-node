@@ -35,3 +35,11 @@ Send me the sheet when done. I'll review it before we do sheet 2 (FPGA rails wit
 Drawn in KiCad 10 and checked: ERC clean (0 errors, 0 warnings). Q1 has its drain on the fuse side and its source on the load side. D2 (12 V Zener) has its anode on the gate node and its cathode on VIN. R1 is 100 k from gate to ground, F1 is 2 A, C1 is 10 uF 50 V as a placeholder until the buck design sets the input capacitors.
 
 Footprints: cleared on all symbols (2026-11-17). Real footprints are assigned in Phase 3 preparation.
+
+## Buck converter as drawn (2026-11-19)
+
+U1 LMR36015ARNXR (TI Ultra Librarian symbol, kept in hardware/ul_LMR36015ARNXR). Values follow the datasheet 5 V design table (SNVSB49D, Table 10-3): L1 10 uH, C2 and C3 22 uF, R2 100 k and R3 24.9 k feedback divider. C4 100 nF boot capacitor from BST to SW, C5 1 uF on VCC, EN tied to VIN, NC (pin 3) joined to SW as the datasheet asks, R4 100 k pull-up from PG to 5 V. Nets: `VIN`, `SW`, `5V`, `PG_5V`.
+
+ERC: 0 errors, 4 warnings. The two errors the TI symbol caused (VCC and SW are typed as power inputs, but the chip drives them) are cleared with a PWR_FLAG on each net. The 4 warnings are expected: no footprint library yet (U1, L1), and unspecified pin types on BST and NC, which are joined to passive and power pins on purpose.
+
+Open: input capacitor value near U1 VIN pins (datasheet section after Table 10-3), check the A, B and FB suffix variants (datasheet section 14), and confirm Vref in the electrical table.

@@ -9,3 +9,4 @@ _autosave-*
 ~*
 *.kicad_pcb-bak
 *.kicad_sch-bak
+.history/

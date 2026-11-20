@@ -94,6 +94,13 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** pick Q1 with a Vds rating that clears the TVS clamping voltage, confirm its on-resistance at the gate voltage the circuit gives at 9 V in. Footprint fields cleared 2026-11-17; real ones are assigned in Phase 3.
 - **Status:** Drawn 2026-11-17, review items open
 
+## D-017: Sheet 1 buck converter
+- **Choice:** LMR36015ARNXR (A variant) making 5 V. L1 10 uH, C2 and C3 22 uF, R2 100 k and R3 24.9 k feedback, C4 100 nF boot, C5 1 uF on VCC, R4 100 k pull-up on PG (net PG_5V), EN tied to VIN.
+- **Reason:** values taken from TI's validated 5 V design table (SNVSB49D). PG_5V will enable the next converter in the 1.0 V, 1.8 V, 3.3 V sequence.
+- **Checked:** ERC 0 errors, 4 expected warnings. PWR_FLAGs added on VCC and SW because the TI symbol types those pins as power inputs.
+- **Open:** input capacitor near VIN, A/B/FB variant check, Vref from the electrical table.
+- **Status:** Drawn 2026-11-19
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -106,3 +113,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-16 | Phase 1 part selection: D-008 to D-011 and docs/PARTS.md added. |
 | 2026-11-16 | D-012 to D-015: programmer, FPGA verification, assembler, rails, bus parts. Phase 1 closed. |
 | 2026-11-17 | D-016: schematic sheet 1 (power input front end) drawn and committed. |
+| 2026-11-19 | D-017: sheet 1 buck converter drawn, TI symbol and footprint added to hardware/. |
