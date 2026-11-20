@@ -669,13 +669,17 @@
         "uuid": "6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
       }
     ],
-    "used_designators": "#PWR1-11,#FLG1-4",
+    "used_designators": "L2-5,#PWR1-27,R5-16,#FLG1-8,C6-17,U2-5",
     "variants": []
   },
   "sheets": [
     [
       "6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f",
       "Root"
+    ],
+    [
+      "0f64b08b-7c6d-4af9-8fb6-384b3b3f40c1",
+      "FPGA rails"
     ]
   ],
   "text_variables": {},

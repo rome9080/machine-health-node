@@ -101,6 +101,14 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** input capacitor near VIN, A/B/FB variant check, Vref from the electrical table.
 - **Status:** Drawn 2026-11-19
 
+## D-018: Sheet 2 FPGA rails
+- **Choice:** three TPS62067DSGR (2 A, 3 MHz) from the 5 V rail: U2 1.0 V, U4 1.8 V, U5 3.3 V. 1 uH inductors, 10 uF input caps, 10 uF output on 1.0 V and 1.8 V, 22 uF on 3.3 V. Dividers from Vref 0.6 V: 120k/180k, 360k/180k, 680k/150k (3.32 V). Cff set for a 25 kHz zero: 51 pF, 22 pF, 10 pF.
+- **Reason:** values from the TPS62065/67 datasheet (SLVS833E): 1 uH and 10 uF are what the internal compensation is tuned for; 22 uF above 2 V because of DC-bias loss; R2 inside 120 to 360 k.
+- **Sequencing:** PG_5V enables 1.0 V, its PG enables 1.8 V, its PG enables 3.3 V. PG pull-ups go to 5 V, not the rail itself, because EN needs at least 1 V to read high.
+- **Checked:** ERC leaves only the 3 expected unconnected sheet outputs. PWR_FLAGs on 5V and the three SW nets.
+- **Open:** total effective capacitance per rail including FPGA bypass caps must stay within 4.5 to 22 uF; inductor Isat and part choice; input cap voltage rating (10 V or more); 5 V load budget against the LMR36015 1.5 A limit; E24 resistor stock at JLCPCB.
+- **Status:** Drawn 2026-11-19
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -114,3 +122,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-16 | D-012 to D-015: programmer, FPGA verification, assembler, rails, bus parts. Phase 1 closed. |
 | 2026-11-17 | D-016: schematic sheet 1 (power input front end) drawn and committed. |
 | 2026-11-19 | D-017: sheet 1 buck converter drawn, TI symbol and footprint added to hardware/. |
+| 2026-11-19 | D-018: sheet 2 FPGA rails (three TPS62067 converters) drawn, TI symbol and footprint added to hardware/. |

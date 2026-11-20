@@ -37,3 +37,32 @@ TI's symbol types VCC and SW as power inputs, so ERC reported that nothing drive
 **What are the remaining ERC warnings?**
 No footprint library yet (assigned in Phase 3), and unspecified pin types on BST and NC. NC is joined to SW on purpose because the datasheet asks for it. I reviewed each warning and left the ones that are expected.
 
+## Sheet 2: FPGA rails (three TPS62067 converters)
+
+**Why three separate converters instead of one?**
+The Spartan-7 needs three supplies (1.0 V core, 1.8 V auxiliary, 3.3 V I/O) and an order to bring them up. Separate converters give independent rails, and each converter's power-good output can enable the next one.
+
+**How is each output voltage set?**
+A resistor divider into the FB pin. The chip adjusts the output until FB equals its 0.6 V reference, so Vout = 0.6 x (1 + R1/R2). For 1.0 V: 120k over 180k. For 1.8 V: 360k over 180k. For 3.3 V: 680k over 150k gives 3.32 V. R2 stays within the datasheet's 120 to 360 k range.
+
+**What is the small capacitor across R1 (Cff) for?**
+It adds a zero to the feedback loop and the datasheet requires it for good regulation. Value from Cff = 1 / (2 pi x R1 x 25 kHz), rounded to a standard value.
+
+**Why 1 uH and 10 uF, and why 22 uF on the 3.3 V rail?**
+The chip's internal compensation is tuned for 1 uH with 10 uF. Ceramic capacitors lose capacitance under DC bias, so the datasheet suggests 22 uF for outputs above 2 V.
+
+**How does the power-up sequence work, and why do the PG pull-ups go to 5 V?**
+PG_5V (from the first buck) enables the 1.0 V converter, whose PG enables the 1.8 V one, whose PG enables the 3.3 V one. PG is open drain, so it needs a pull-up. The next converter's EN needs at least 1 V to read high, which a 1.0 V pull-up would only just reach. The datasheet allows the pull-up on any rail at or below AVIN, so 5 V is used.
+
+**Why does EN have to be connected?**
+The datasheet says EN must be terminated and never left floating.
+
+**How do signals cross between sheets?**
+Net labels are local to a sheet. A hierarchical label inside the sub-sheet and a matching pin on the sheet box carry a signal across. The sub-sheet takes 5V and PG_5V in and gives 1V0, 1V8 and 3V3 out.
+
+**Why PWR_FLAGs again?**
+ERC only knows pin types. The TI symbol types SW as a power input, and the 5 V net has no pin typed as a power output, so ERC reports them as undriven. A PWR_FLAG marks the net as intentionally powered and adds nothing to the board.
+
+**What went wrong and what did you learn?**
+A first paste dropped a second copy of rail 1 exactly on top of the original. I found it from doubled reference text, proved it by moving a part, deleted the stack and rebuilt the rail, then checked the saved file for duplicate references. Lesson: paste once, and verify by reading the file, not only the drawing.
+
