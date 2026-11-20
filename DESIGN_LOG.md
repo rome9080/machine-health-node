@@ -153,3 +153,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-20 | D-022: sheet 5 communications drawn (RS-485, CAN FD, ESP32-C3 BLE); THVD1410, TCAN1042V and Espressif symbol libraries added to hardware/. |
 | 2026-11-20 | D-023: sheet 6 programmer drawn (USB-C, ESD, AP2112K LDO, FT2232HL with JTAG on channel A and UART on channel B); JTAG now wired to FPGA core at root. |
 | 2026-11-20 | D-024: sheet 7 test points drawn (rails, grounds, eight key signals). |
+| 2026-11-20 | D-025: first full ERC (131 errors to 5): no-connect flags on spare FPGA/ESP32 pins, FPGA mode pins M2/M1 tied low (M0 high = master SPI), PWR_FLAGs on rails and VBUS, duplicate refs fixed. Remaining: 4 harmless GND pin-type errors on U7/U9 (to exclude) plus footprint warnings. |

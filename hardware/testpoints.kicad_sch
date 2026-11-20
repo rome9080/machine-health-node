@@ -16,6 +16,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "TP"
 				(at 0 6.858 0)
 				(show_name no)
@@ -219,6 +221,499 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(wire
+		(pts
+			(xy 119.38 111.76) (xy 119.38 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1219163a-3fd5-47ef-a02d-d329405eedac")
+	)
+	(wire
+		(pts
+			(xy 154.94 111.76) (xy 154.94 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cbc10a4-1c89-4ce8-b2e0-378324ccec47")
+	)
+	(wire
+		(pts
+			(xy 48.26 60.96) (xy 48.26 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "248fa637-32f1-4fc8-ae10-f25fbd13b738")
+	)
+	(wire
+		(pts
+			(xy 66.04 111.76) (xy 66.04 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c66d606-6ff4-4d0c-8308-9b32935df6d4")
+	)
+	(wire
+		(pts
+			(xy 119.38 60.96) (xy 119.38 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d62802c-87aa-4ede-8f44-188a019b898a")
+	)
+	(wire
+		(pts
+			(xy 66.04 60.96) (xy 66.04 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "443fa202-538d-48ae-a966-cc8123a8485d")
+	)
+	(wire
+		(pts
+			(xy 101.6 60.96) (xy 101.6 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f9cacda-c02a-49ed-8794-a21a0b385bcd")
+	)
+	(wire
+		(pts
+			(xy 101.6 111.76) (xy 101.6 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97a56fc4-e5a1-48c9-92d9-09fa5be89f4f")
+	)
+	(wire
+		(pts
+			(xy 137.16 111.76) (xy 137.16 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac2f12b0-548f-4a21-9673-d7950497a829")
+	)
+	(wire
+		(pts
+			(xy 83.82 60.96) (xy 83.82 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d074fb66-11e9-4a4c-b05e-7c5b61610dc2")
+	)
+	(wire
+		(pts
+			(xy 30.48 111.76) (xy 30.48 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d535481d-ac9b-4dc7-9240-f2e77c6f1dbd")
+	)
+	(wire
+		(pts
+			(xy 83.82 111.76) (xy 83.82 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dcddf649-7d1b-419f-8ef8-69364789b2e2")
+	)
+	(wire
+		(pts
+			(xy 48.26 111.76) (xy 48.26 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6a98a08-a32e-4798-b2da-1b2b48dbd98b")
+	)
+	(wire
+		(pts
+			(xy 137.16 60.96) (xy 137.16 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6c529fa-7714-458e-a18e-2bfc389be9ab")
+	)
+	(wire
+		(pts
+			(xy 30.48 60.96) (xy 30.48 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f195c588-9ba6-4ce0-b4b9-ce92a5daa600")
+	)
+	(global_label "TEMP_ALERT"
+		(shape bidirectional)
+		(at 83.82 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "10692d15-59b1-4b80-ba4f-47c239dce9e3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83.82 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "USB_UART_TX"
+		(shape bidirectional)
+		(at 101.6 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "38ec11b2-617c-4c17-b15c-c9969e97d945")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.6 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "CAN_TX"
+		(shape bidirectional)
+		(at 154.94 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5462a9ec-c474-4f78-a8f9-c6eafd88ea69")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 154.94 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "ACC_INT1"
+		(shape bidirectional)
+		(at 66.04 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "89c8bd80-654c-4a8f-8f6c-90c2e55fe7d1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 66.04 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "ADC_CLKIN"
+		(shape bidirectional)
+		(at 48.26 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9b5efe53-6ec2-4c08-87a3-9751a7d5d2f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 48.26 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "USB_UART_RX"
+		(shape bidirectional)
+		(at 119.38 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9e65f054-0a42-4639-ada9-fdc692c30d98")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 119.38 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "RS485_DE"
+		(shape bidirectional)
+		(at 137.16 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b7ef7974-1099-498b-aac8-bc6305d7d1f6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 137.16 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "ADC_DRDY"
+		(shape bidirectional)
+		(at 30.48 116.84 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f4e62944-cb5a-4e23-883a-c6b934c0e870")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 30.48 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(hierarchical_label "5V"
+		(shape input)
+		(at 30.48 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "42e5bd10-af9b-43ff-a131-9b904b7251e5")
+	)
+	(hierarchical_label "1V0"
+		(shape input)
+		(at 83.82 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "475589ab-a2ed-40a6-b8d6-13e849ac260d")
+	)
+	(hierarchical_label "1V8"
+		(shape input)
+		(at 66.04 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49bc3c9c-5d4e-4825-879c-ce50c4b91a34")
+	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 48.26 66.04 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "69e942f5-f9a4-43c2-8832-b9fa4e2cb380")
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
@@ -297,30 +792,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 30.48 60.96) (xy 30.48 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f195c588-9ba6-4ce0-b4b9-ce92a5daa600")
-	)
-	(hierarchical_label "5V"
-		(shape input)
-		(at 30.48 66.04 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "42e5bd10-af9b-43ff-a131-9b904b7251e5")
-	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 48.26 60.96 0)
+		(at 119.38 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -329,9 +803,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3e35bd39-7b25-42fa-a576-af7a29e7525c")
-		(property "Reference" "TP2"
-			(at 50.8 55.88 0)
+		(uuid "0c69fab1-be5a-4e9e-bef8-2c4903089532")
+		(property "Reference" "TP13"
+			(at 121.92 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -340,8 +814,8 @@
 				)
 			)
 		)
-		(property "Value" "3V3"
-			(at 50.8 58.42 0)
+		(property "Value" "USB_UART_RX"
+			(at 121.92 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -351,7 +825,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 60.96 0)
+			(at 119.38 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -362,7 +836,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 48.26 60.96 0)
+			(at 119.38 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -373,7 +847,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 48.26 60.96 0)
+			(at 119.38 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -384,233 +858,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "6c0cce52-7702-494e-b576-ed5de5161ab5")
+			(uuid "cfceda63-9713-444f-8986-bb42b42c1238")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP2")
+					(reference "TP13")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 48.26 60.96) (xy 48.26 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "248fa637-32f1-4fc8-ae10-f25fbd13b738")
-	)
-	(hierarchical_label "3V3"
-		(shape input)
-		(at 48.26 66.04 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "69e942f5-f9a4-43c2-8832-b9fa4e2cb380")
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 66.04 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "42fff41c-17be-4cb3-97d4-8067558858f8")
-		(property "Reference" "TP3"
-			(at 68.58 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V8"
-			(at 68.58 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 66.04 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 66.04 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ff26d8a3-eb0c-4247-ab75-483b17a2c508")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 66.04 60.96) (xy 66.04 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "443fa202-538d-48ae-a966-cc8123a8485d")
-	)
-	(hierarchical_label "1V8"
-		(shape input)
-		(at 66.04 66.04 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "49bc3c9c-5d4e-4825-879c-ce50c4b91a34")
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 83.82 60.96 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "841c4019-7fec-4745-97ae-dc1bb75f7b84")
-		(property "Reference" "TP4"
-			(at 86.36 55.88 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1V0"
-			(at 86.36 58.42 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 83.82 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "53f1119d-f4a9-471b-9701-56581f4b5c7d")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 83.82 60.96) (xy 83.82 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d074fb66-11e9-4a4c-b05e-7c5b61610dc2")
-	)
-	(hierarchical_label "1V0"
-		(shape input)
-		(at 83.82 66.04 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "475589ab-a2ed-40a6-b8d6-13e849ac260d")
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
@@ -689,31 +946,20 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 101.6 60.96) (xy 101.6 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f9cacda-c02a-49ed-8794-a21a0b385bcd")
-	)
 	(symbol
-		(lib_id "power:GND")
-		(at 101.6 66.04 0)
+		(lib_id "Connector:TestPoint")
+		(at 83.82 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7cd4856d-6be2-4279-9ed8-7b6db2f5b5b6")
-		(property "Reference" "#PWR321"
-			(at 101.6 59.69 0)
-			(hide yes)
+		(uuid "218ebe19-ab41-4550-be0e-8b7c787453d1")
+		(property "Reference" "TP11"
+			(at 86.36 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -722,8 +968,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 101.6 69.85 0)
+		(property "Value" "TEMP_ALERT"
+			(at 86.36 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -733,7 +979,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 66.04 0)
+			(at 83.82 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -744,7 +990,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 101.6 66.04 0)
+			(at 83.82 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -754,8 +1000,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 101.6 66.04 0)
+		(property "Description" "test point"
+			(at 83.82 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -766,12 +1012,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "79ece4a3-f62c-45bb-b77a-1ae9b7fb8f97")
+			(uuid "efee6b82-fe01-4e80-8e71-5783d077c7cf")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "#PWR321")
+					(reference "TP11")
 					(unit 1)
 				)
 			)
@@ -854,97 +1100,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 119.38 60.96) (xy 119.38 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3d62802c-87aa-4ede-8f44-188a019b898a")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 119.38 66.04 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8f6bc28b-9b8c-48cf-a197-89685ac7d367")
-		(property "Reference" "#PWR322"
-			(at 119.38 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.38 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 119.38 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 119.38 66.04 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d22f0c52-df5b-4002-a645-a91168078d36")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "#PWR322")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 137.16 60.96 0)
+		(at 137.16 111.76 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -953,9 +1111,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b1d18a49-c722-45f7-8065-b67c61d8ee08")
-		(property "Reference" "TP7"
-			(at 139.7 55.88 0)
+		(uuid "36aaab02-a922-4418-8bcf-ae95c13f2f0b")
+		(property "Reference" "TP14"
+			(at 139.7 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -964,8 +1122,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 139.7 58.42 0)
+		(property "Value" "RS485_DE"
+			(at 139.7 109.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -975,7 +1133,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 60.96 0)
+			(at 137.16 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -986,7 +1144,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 60.96 0)
+			(at 137.16 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -997,7 +1155,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 137.16 60.96 0)
+			(at 137.16 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1008,42 +1166,31 @@
 			)
 		)
 		(pin "1"
-			(uuid "20885b43-f37d-41c1-8fcd-79e6ea1be474")
+			(uuid "f72ba9d6-a8e4-4b4d-a2c2-7bd343f442b4")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP7")
+					(reference "TP14")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 137.16 60.96) (xy 137.16 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6c529fa-7714-458e-a18e-2bfc389be9ab")
-	)
 	(symbol
-		(lib_id "power:GND")
-		(at 137.16 66.04 0)
+		(lib_id "Connector:TestPoint")
+		(at 48.26 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ece768a3-cd15-4e33-8987-47157dd652ff")
-		(property "Reference" "#PWR323"
-			(at 137.16 59.69 0)
-			(hide yes)
+		(uuid "3e35bd39-7b25-42fa-a576-af7a29e7525c")
+		(property "Reference" "TP2"
+			(at 50.8 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1052,8 +1199,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 137.16 69.85 0)
+		(property "Value" "3V3"
+			(at 50.8 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1063,7 +1210,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 137.16 66.04 0)
+			(at 48.26 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1074,7 +1221,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 137.16 66.04 0)
+			(at 48.26 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1084,8 +1231,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 137.16 66.04 0)
+		(property "Description" "test point"
+			(at 48.26 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1096,12 +1243,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "3c561481-b713-4909-aa12-70fddae75491")
+			(uuid "6c0cce52-7702-494e-b576-ed5de5161ab5")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "#PWR323")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -1184,35 +1331,311 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 30.48 111.76) (xy 30.48 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d535481d-ac9b-4dc7-9240-f2e77c6f1dbd")
-	)
-	(global_label "ADC_DRDY"
-		(shape bidirectional)
-		(at 30.48 116.84 270)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 66.04 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
+		(uuid "42fff41c-17be-4cb3-97d4-8067558858f8")
+		(property "Reference" "TP3"
+			(at 68.58 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right)
 		)
-		(uuid "f4e62944-cb5a-4e23-883a-c6b934c0e870")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 30.48 116.84 0)
+		(property "Value" "1V8"
+			(at 68.58 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 66.04 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 66.04 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff26d8a3-eb0c-4247-ab75-483b17a2c508")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 154.94 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44932dc8-6cae-43dc-ade0-e53204d8e1d7")
+		(property "Reference" "TP15"
+			(at 157.48 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "CAN_TX"
+			(at 157.48 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.94 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 154.94 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "57820023-4a3f-4bab-88b9-0adea57a732e")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cd4856d-6be2-4279-9ed8-7b6db2f5b5b6")
+		(property "Reference" "#PWR401"
+			(at 101.6 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 101.6 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 101.6 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "79ece4a3-f62c-45bb-b77a-1ae9b7fb8f97")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "#PWR401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 83.82 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "841c4019-7fec-4745-97ae-dc1bb75f7b84")
+		(property "Reference" "TP4"
+			(at 86.36 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1V0"
+			(at 86.36 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 83.82 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "53f1119d-f4a9-471b-9701-56581f4b5c7d")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "TP4")
+					(unit 1)
 				)
 			)
 		)
@@ -1294,35 +1717,312 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 48.26 111.76) (xy 48.26 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e6a98a08-a32e-4798-b2da-1b2b48dbd98b")
-	)
-	(global_label "ADC_CLKIN"
-		(shape bidirectional)
-		(at 48.26 116.84 270)
+	(symbol
+		(lib_id "power:GND")
+		(at 119.38 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9b5efe53-6ec2-4c08-87a3-9751a7d5d2f4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.26 116.84 0)
+		(uuid "8f6bc28b-9b8c-48cf-a197-89685ac7d367")
+		(property "Reference" "#PWR402"
+			(at 119.38 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 119.38 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 119.38 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d22f0c52-df5b-4002-a645-a91168078d36")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "#PWR402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 137.16 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1d18a49-c722-45f7-8065-b67c61d8ee08")
+		(property "Reference" "TP7"
+			(at 139.7 55.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 137.16 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "20885b43-f37d-41c1-8fcd-79e6ea1be474")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 101.6 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c3cc5417-3ae4-4060-85f4-f0f855389a7f")
+		(property "Reference" "TP12"
+			(at 104.14 106.68 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB_UART_TX"
+			(at 104.14 109.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 101.6 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a6c6abb5-75a7-4ffe-8263-1e0289c52152")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 137.16 66.04 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ece768a3-cd15-4e33-8987-47157dd652ff")
+		(property "Reference" "#PWR403"
+			(at 137.16 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 137.16 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 137.16 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3c561481-b713-4909-aa12-70fddae75491")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
+					(reference "#PWR403")
+					(unit 1)
 				)
 			)
 		)
@@ -1406,27 +2106,34 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 111.76) (xy 66.04 116.84)
+			(xy 48.26 63.5) (xy 43.18 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3c66d606-6ff4-4d0c-8308-9b32935df6d4")
+		(uuid "beea2992-bb34-4cd3-b137-1c3fae5cf572")
 	)
-	(global_label "ACC_INT1"
-		(shape bidirectional)
-		(at 66.04 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "89c8bd80-654c-4a8f-8f6c-90c2e55fe7d1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 66.04 116.84 0)
+	(junction
+		(at 48.26 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4b0a47c1-3623-484e-bf11-aee1d0ef7307")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 43.18 63.5 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d2872fd0-9580-4974-b995-b943c87a2878")
+		(property "Reference" "#FLG11"
+			(at 43.18 65.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1436,31 +2143,8 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 83.82 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "218ebe19-ab41-4550-be0e-8b7c787453d1")
-		(property "Reference" "TP11"
-			(at 86.36 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TEMP_ALERT"
-			(at 86.36 109.22 0)
+		(property "Value" "PWR_FLAG"
+			(at 43.18 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1470,7 +2154,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 83.82 111.76 0)
+			(at 43.18 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1480,8 +2164,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 83.82 111.76 0)
+		(property "Datasheet" ""
+			(at 43.18 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1491,8 +2175,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 83.82 111.76 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 43.18 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1503,12 +2187,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "efee6b82-fe01-4e80-8e71-5783d077c7cf")
+			(uuid "424e17d1-76c5-41dd-bee1-16db4d29ebec")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP11")
+					(reference "#FLG11")
 					(unit 1)
 				)
 			)
@@ -1516,27 +2200,34 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 111.76) (xy 83.82 116.84)
+			(xy 66.04 63.5) (xy 60.96 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dcddf649-7d1b-419f-8ef8-69364789b2e2")
+		(uuid "f59faf9f-2a42-4563-a568-2997300d30cb")
 	)
-	(global_label "TEMP_ALERT"
-		(shape bidirectional)
-		(at 83.82 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "10692d15-59b1-4b80-ba4f-47c239dce9e3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 83.82 116.84 0)
+	(junction
+		(at 66.04 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fc8149b1-38a7-4f87-8c98-a704e7d9d826")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 60.96 63.5 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4b6cdb23-6958-4355-8c38-50e549c7bd60")
+		(property "Reference" "#FLG12"
+			(at 60.96 65.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1546,31 +2237,8 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 101.6 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c3cc5417-3ae4-4060-85f4-f0f855389a7f")
-		(property "Reference" "TP12"
-			(at 104.14 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "USB_UART_TX"
-			(at 104.14 109.22 0)
+		(property "Value" "PWR_FLAG"
+			(at 60.96 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1580,7 +2248,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 111.76 0)
+			(at 60.96 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1590,8 +2258,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 101.6 111.76 0)
+		(property "Datasheet" ""
+			(at 60.96 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1601,8 +2269,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 101.6 111.76 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 60.96 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1613,12 +2281,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6c6abb5-75a7-4ffe-8263-1e0289c52152")
+			(uuid "5b6c54b1-56d3-4597-b027-e8a7dfcefe1f")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP12")
+					(reference "#FLG12")
 					(unit 1)
 				)
 			)
@@ -1626,27 +2294,34 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 111.76) (xy 101.6 116.84)
+			(xy 83.82 63.5) (xy 78.74 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "97a56fc4-e5a1-48c9-92d9-09fa5be89f4f")
+		(uuid "5382aee6-e407-4cab-a96e-3d95a1cb43da")
 	)
-	(global_label "USB_UART_TX"
-		(shape bidirectional)
-		(at 101.6 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "38ec11b2-617c-4c17-b15c-c9969e97d945")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.6 116.84 0)
+	(junction
+		(at 83.82 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef16b9f9-cb3a-48cf-98f3-2562b045f0c8")
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 78.74 63.5 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "abe12944-1763-42b0-90a0-0437f47ad475")
+		(property "Reference" "#FLG13"
+			(at 78.74 65.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1656,31 +2331,8 @@
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 119.38 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c69fab1-be5a-4e9e-bef8-2c4903089532")
-		(property "Reference" "TP13"
-			(at 121.92 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "USB_UART_RX"
-			(at 121.92 109.22 0)
+		(property "Value" "PWR_FLAG"
+			(at 78.74 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1690,7 +2342,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 119.38 111.76 0)
+			(at 78.74 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1700,8 +2352,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 119.38 111.76 0)
+		(property "Datasheet" ""
+			(at 78.74 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1711,8 +2363,8 @@
 				)
 			)
 		)
-		(property "Description" "test point"
-			(at 119.38 111.76 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 78.74 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1723,279 +2375,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "cfceda63-9713-444f-8986-bb42b42c1238")
+			(uuid "a42ff23c-159a-4e5c-9962-43dc7193b809")
 		)
 		(instances
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP13")
+					(reference "#FLG13")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(wire
-		(pts
-			(xy 119.38 111.76) (xy 119.38 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1219163a-3fd5-47ef-a02d-d329405eedac")
-	)
-	(global_label "USB_UART_RX"
-		(shape bidirectional)
-		(at 119.38 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9e65f054-0a42-4639-ada9-fdc692c30d98")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.38 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 137.16 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "36aaab02-a922-4418-8bcf-ae95c13f2f0b")
-		(property "Reference" "TP14"
-			(at 139.7 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "RS485_DE"
-			(at 139.7 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 137.16 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 137.16 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f72ba9d6-a8e4-4b4d-a2c2-7bd343f442b4")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 137.16 111.76) (xy 137.16 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ac2f12b0-548f-4a21-9673-d7950497a829")
-	)
-	(global_label "RS485_DE"
-		(shape bidirectional)
-		(at 137.16 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b7ef7974-1099-498b-aac8-bc6305d7d1f6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 137.16 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 154.94 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44932dc8-6cae-43dc-ade0-e53204d8e1d7")
-		(property "Reference" "TP15"
-			(at 157.48 106.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CAN_TX"
-			(at 157.48 109.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 154.94 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "57820023-4a3f-4bab-88b9-0adea57a732e")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/228839a7-e04a-4a5a-934f-ee25bf40afbd"
-					(reference "TP15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 154.94 111.76) (xy 154.94 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1cbc10a4-1c89-4ce8-b2e0-378324ccec47")
-	)
-	(global_label "CAN_TX"
-		(shape bidirectional)
-		(at 154.94 116.84 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5462a9ec-c474-4f78-a8f9-c6eafd88ea69")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.94 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(text "Test points: rails on the top row, key signals below. Each is a bare pad for a scope or DMM probe."
-		(exclude_from_sim no)
-		(at 30.48 40.64 0)
-		(effects
-			(font
-				(size 1.8 1.8)
-			)
-			(justify left bottom)
-		)
-		(uuid "bc7b052e-876e-43bb-8ff7-cd6360cfe945")
 	)
 )
