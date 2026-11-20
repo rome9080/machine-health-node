@@ -2089,6 +2089,12 @@
 		(uuid "8e75ffab-448c-4a12-af19-f86cece2cc22")
 	)
 	(junction
+		(at 213.36 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94a92495-3a2c-40a6-a260-8d8c9f2462ad")
+	)
+	(junction
 		(at 123.19 105.41)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2294,6 +2300,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 83.82) (xy 213.36 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e3e1ecd-58de-4686-9ecb-a110bd05cda3")
+	)
+	(wire
+		(pts
 			(xy 76.2 105.41) (xy 87.63 105.41)
 		)
 		(stroke
@@ -2334,6 +2350,16 @@
 	)
 	(wire
 		(pts
+			(xy 246.38 83.82) (xy 254 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c16340-1202-4955-8c47-7fa5ae48cf65")
+	)
+	(wire
+		(pts
 			(xy 209.55 83.82) (xy 222.25 83.82)
 		)
 		(stroke
@@ -2354,6 +2380,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 92.71) (xy 246.38 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2831603-89e5-429f-ab5d-030b49cb4638")
+	)
+	(wire
+		(pts
 			(xy 194.31 77.47) (xy 189.23 77.47)
 		)
 		(stroke
@@ -2371,6 +2407,16 @@
 			(type default)
 		)
 		(uuid "d9712849-14a2-46f6-bd3d-bee088381a73")
+	)
+	(wire
+		(pts
+			(xy 246.38 92.71) (xy 246.38 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daee7417-d69b-448e-866d-8ac3ba912043")
 	)
 	(wire
 		(pts
@@ -5342,6 +5388,72 @@
 		)
 	)
 	(sheet
+		(at 254 93.98)
+		(size 15.24 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c291776e-2734-4fea-aecb-4502c68d6d36")
+		(property "Sheetname" "Comms"
+			(at 254 93.2684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "comms.kicad_sch"
+			(at 254 109.8046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 254 96.52 180)
+			(uuid "503e5432-70c3-43dd-871d-7ccb98997b75")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "5V" input
+			(at 254 100.33 180)
+			(uuid "c5d21cc3-2af2-4dab-8e91-868468a8434a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 222.25 73.66)
 		(size 15.24 15.24)
 		(exclude_from_sim no)
@@ -5417,51 +5529,61 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 246.38 92.71) (xy 246.38 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b2f0a5c-bb7f-4edf-801f-51d666e8e7c2")
+	)
+	(wire
+		(pts
+			(xy 246.38 96.52) (xy 254 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72d8f3fc-523d-4aa8-a78c-9de5f7b1eab4")
+	)
 	(junction
-		(at 213.36 83.82)
+		(at 246.38 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "94a92495-3a2c-40a6-a260-8d8c9f2462ad")
+		(uuid "434586ba-99c1-4972-88b4-5a380d91a2b8")
 	)
 	(wire
 		(pts
-			(xy 213.36 83.82) (xy 213.36 92.71)
+			(xy 254 100.33) (xy 248.92 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e3e1ecd-58de-4686-9ecb-a110bd05cda3")
+		(uuid "539d935d-6bf5-4f4e-93e1-58e642241b75")
 	)
-	(wire
-		(pts
-			(xy 213.36 92.71) (xy 246.38 92.71)
+	(label "5V"
+		(at 248.92 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2831603-89e5-429f-ab5d-030b49cb4638")
+		(uuid "42aa009e-621f-4f45-86ac-4b548280fa34")
 	)
-	(wire
-		(pts
-			(xy 246.38 92.71) (xy 246.38 83.82)
+	(label "5V"
+		(at 191.77 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "daee7417-d69b-448e-866d-8ac3ba912043")
-	)
-	(wire
-		(pts
-			(xy 246.38 83.82) (xy 254 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4c16340-1202-4955-8c47-7fa5ae48cf65")
+		(uuid "cf8647ae-37f1-4d7a-aadb-903bd1693b19")
 	)
 	(sheet_instances
 		(path "/"

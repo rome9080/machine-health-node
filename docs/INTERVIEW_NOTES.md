@@ -106,3 +106,32 @@ The vibration data needs high sample rates, so SPI. Temperature changes slowly a
 **What went wrong and what did you learn?**
 I first wired the LSM6DSO decoupling capacitors in series with the supply, which would have left the chip unpowered. A decoupling capacitor goes from the supply to ground beside the supply line, never in the path. Also the sheet's 3V3 labels were local, so the sheet had no real connection to the 3V3 rail until I added a hierarchical pin. ERC cannot catch that, so I checked what feeds each net by reading the connections.
 
+## Sheet 5: Communications (RS-485, CAN FD, BLE)
+
+**Why RS-485 and why a direction pin?**
+RS-485 is a differential bus used by industrial Modbus devices, and it works over long cables in noisy environments. It is half duplex: two wires carry data both ways, so only one device may drive at a time. The DE (driver enable) and RE (receiver enable) pins switch the chip between transmit and receive. I tied them together so one FPGA pin controls the direction.
+
+**Why 120 ohm termination behind a jumper?**
+A long cable needs a 120 ohm resistor at each end to stop signal reflections, but not at devices in the middle. The jumper lets me remove the termination when the node is not at the end of the bus.
+
+**Why 10 ohm series resistors on the RS-485 lines?**
+They limit surge current into the transceiver, following the protection circuit in the datasheet. A TVS diode goes at the connector for surge protection.
+
+**How is CAN FD different from RS-485?**
+CAN is a multi-master bus with built-in arbitration and message priorities, used in vehicles and machinery. CAN FD allows faster data and longer frames. The transceiver chip only does the analog side; the CAN controller logic is written in RTL on the FPGA.
+
+**Why does the CAN transceiver have two supplies?**
+VCC (5 V) powers the driver for the bus voltages. VIO (3.3 V) sets the logic levels so the 3.3 V FPGA connects without a level shifter.
+
+**Why pull the STB pin low?**
+Low selects normal mode. The 10k pull-down puts the transceiver in normal mode by default, before the FPGA has loaded its configuration.
+
+**Why a separate BLE module?**
+The ESP32-C3 module contains the radio and Bluetooth stack, which would be impractical to write in RTL. It talks to the FPGA over a UART. The FPGA also drives the module's EN and BOOT pins, so it can reset and reflash it.
+
+**What are the pull-ups on the ESP32?**
+Strapping pins decide the boot mode at power-up. High on IO2, IO8 and IO9 gives a normal flash boot, and the FPGA can pull IO9 low to enter download mode. The RC on EN (10k and 1 uF) delays startup until the supply is stable.
+
+**What did you learn?**
+Decoupling capacitors and pull-ups can be drawn as separate groups tied to the rails by labels, which keeps wires short and the sheet readable. I also verified connectivity by listing the net of every pin, not only by eye.
+

@@ -128,6 +128,12 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** CT clamp part (100 A : 50 mA assumed) and burden value; ESD/TVS on the clamp inputs; decoupling values against the final datasheets at the review.
 - **Status:** Drawn 2026-11-20
 
+## D-022: Sheet 5 communications
+- **Choice:** RS-485 THVD1410 on 3V3 with half-duplex direction pin (RE and DE tied), 10 ohm series resistors, 120 ohm termination behind a jumper, 3-pin screw terminal (A, B, GND). CAN FD TCAN1042V on 5V with VIO on 3V3, STB pulled low by 10k (normal mode by default), 120 ohm termination behind a jumper, 3-pin terminal. BLE: ESP32-C3-MINI-1 with EN RC (10k, 1 uF), IO2, IO8, IO9 pulled high, UART to the FPGA, FPGA control of EN and BOOT for reflashing. Signals by global labels; 3V3 and 5V by hierarchical pins.
+- **Reason:** the THVD1410 has built-in fail-safe biasing so no bias resistors are needed; the jumper lets the node sit mid-bus without termination. TCAN1042V takes 3.3 V logic through VIO, so the FPGA connects directly. The ESP32 handles the BLE stack, which would be impractical in RTL.
+- **Open:** RS-485 TVS (SM712 class) not fitted on the sheet yet; CAN ESD/common-mode choke not added (transceiver is rated for 58 V bus faults and 15 kV IEC ESD); ESP32-C3-MINI-1 pin and strapping details to be checked against the Espressif datasheet; ESP32 footprint library to be added at footprint assignment; JLCPCB stock for the -N4 variant.
+- **Status:** Drawn 2026-11-20
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -144,3 +150,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-19 | D-018: sheet 2 FPGA rails (three TPS62067 converters) drawn, TI symbol and footprint added to hardware/. |
 | 2026-11-20 | D-019, D-020: sheet 3 FPGA core drawn (power pins, decoupling, flash boot, clock, I/O plan); XC7S25 symbol and footprint added to hardware/. |
 | 2026-11-20 | D-021: sheet 4 sensors drawn (LSM6DSO, TMP117, ADS131M04, three CT inputs); Ultra Librarian symbols and footprints added to hardware/. |
+| 2026-11-20 | D-022: sheet 5 communications drawn (RS-485, CAN FD, ESP32-C3 BLE); THVD1410, TCAN1042V and Espressif symbol libraries added to hardware/. |
