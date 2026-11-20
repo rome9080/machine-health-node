@@ -66,3 +66,26 @@ ERC only knows pin types. The TI symbol types SW as a power input, and the 5 V n
 **What went wrong and what did you learn?**
 A first paste dropped a second copy of rail 1 exactly on top of the original. I found it from doubled reference text, proved it by moving a part, deleted the stack and rebuilt the rail, then checked the saved file for duplicate references. Lesson: paste once, and verify by reading the file, not only the drawing.
 
+## Sheet 3: FPGA core (Spartan-7 XC7S25)
+
+**Why does an FPGA need an external flash chip?**
+The Spartan-7 stores its logic in volatile SRAM, so it forgets everything when power is removed. At every power-up it reloads itself from external flash over SPI. The flash holds the bitstream, the compiled file that makes my RISC-V core. SRAM-based FPGAs trade non-volatility for density and speed.
+
+**What are the M pins?**
+Three mode pins read at power-up that select the configuration method. 001 is Master SPI: the FPGA drives the clock and reads the flash itself. I tied M0 high and M1 and M2 low.
+
+**Why pull-ups on PROGRAM_B, INIT_B and DONE?**
+They are open-drain pins, so they can only pull low. A resistor to 3.3 V provides the high level.
+
+**Why 10k pull-ups on the flash CS, WP and HOLD pins?**
+Chip select must stay high until the FPGA takes control. WP# and HOLD# must not float low in single-bit mode or the flash stops responding.
+
+**How did you decide how many decoupling capacitors?**
+From AMD's UG483 table per supply. I skipped the large bulk capacitors because each TPS62067 converter allows only 22 uF effective on its output and its own output capacitor already acts as bulk. That is a deliberate deviation, recorded as D-019, with a plan to measure rail noise at bring-up.
+
+**What went wrong and what did you learn?**
+The Ultra Librarian symbol typed the ground pins as power outputs, so ERC reported ground pins driving each other. I changed them to power inputs in the library and the embedded copy. Later a file write of mine delivered an old copy over the new one and your sheet temporarily lost parts. I caught it from the ERC (labels with only one pin), restored from my copy and verified the file byte for byte. Lesson: verify a written file by reading it back.
+
+**Why global labels for the signals and hierarchical pins for power?**
+About 40 peripheral signals would need 40 sheet pins on the root page. Global labels connect by name across sheets. Power rails stay hierarchical so the power path is visible on the root page.
+

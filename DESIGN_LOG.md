@@ -109,6 +109,19 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** total effective capacitance per rail including FPGA bypass caps must stay within 4.5 to 22 uF; inductor Isat and part choice; input cap voltage rating (10 V or more); 5 V load budget against the LMR36015 1.5 A limit; E24 resistor stock at JLCPCB.
 - **Status:** Drawn 2026-11-19
 
+## D-019: Sheet 3 FPGA decoupling
+- **Choice:** AMD UG483 small capacitors only. 1V0: 3 x 4.7 uF + 4 x 0.47 uF. 1V8: 1 x 4.7 uF + 2 x 0.47 uF. 3V3: 4 x 4.7 uF + 8 x 0.47 uF (1 x 4.7 uF and 2 x 0.47 uF per bank). The 47 and 100 uF bulk capacitors in the table are skipped.
+- **Reason:** each TPS62067 allows 4.5 to 22 uF effective on its output, and its own 10 or 22 uF output capacitor already acts as the bulk. UG483's full per-bank count (2 x 4.7 uF + 4 x 0.47 uF) on the 3.3 V rail would pass that limit. This is thinner than AMD's table.
+- **Open:** check effective capacitance per rail with DC-bias derating; revisit if bring-up shows noise on the rails.
+- **Status:** Drawn 2026-11-20
+
+## D-020: Sheet 3 configuration, clock, I/O plan
+- **Choice:** Master SPI x4 boot (M[2:0] = 001) from a W25Q32JVSS 32 Mbit flash on 3.3 V. Pull-ups: 4.7k on PROGRAM_B, INIT_B, DONE; 10k on QSPI_CS, QSPI_IO2, QSPI_IO3. 100 MHz oscillator to a clock-capable (MRCC) pin. 4 LEDs, 2 buttons, a 1x8 GPIO header and a 1x6 JTAG backup header. 40 signal pins assigned in banks 14, 15 and 34, connected by global labels; power rails stay hierarchical.
+- **Reason:** the Spartan-7 is SRAM-based and loads its bitstream from external flash at every power-up. 32 Mbit holds the roughly 10 Mbit bitstream with room for RISC-V firmware. Global labels avoid roughly 40 sheet pins on the root page.
+- **Checked:** ERC leaves only unwired spare IO pins, four JTAG labels waiting on the programmer sheet and footprint-library warnings. GND pins retyped from power output to power input in the symbol (library and embedded copy).
+- **Open:** verify VREFP/VREFN against UG480; -C vs -I grade; real 100 MHz oscillator part; bank swaps at layout; no-connect flags on spare pins at the end of Phase 2.
+- **Status:** Drawn 2026-11-20
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -123,3 +136,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-17 | D-016: schematic sheet 1 (power input front end) drawn and committed. |
 | 2026-11-19 | D-017: sheet 1 buck converter drawn, TI symbol and footprint added to hardware/. |
 | 2026-11-19 | D-018: sheet 2 FPGA rails (three TPS62067 converters) drawn, TI symbol and footprint added to hardware/. |
+| 2026-11-20 | D-019, D-020: sheet 3 FPGA core drawn (power pins, decoupling, flash boot, clock, I/O plan); XC7S25 symbol and footprint added to hardware/. |

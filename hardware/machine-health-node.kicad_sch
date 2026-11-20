@@ -2154,6 +2154,16 @@
 	)
 	(wire
 		(pts
+			(xy 209.55 76.2) (xy 222.25 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "298950b9-7a37-4abe-8613-f1b0a7d32d09")
+	)
+	(wire
+		(pts
 			(xy 120.65 114.3) (xy 120.65 105.41)
 		)
 		(stroke
@@ -2321,6 +2331,26 @@
 			(type default)
 		)
 		(uuid "b1ff2320-27e9-45d9-85e2-8b70f65f74d0")
+	)
+	(wire
+		(pts
+			(xy 209.55 83.82) (xy 222.25 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c68601a2-1e6a-482e-abd5-89d2543f1512")
+	)
+	(wire
+		(pts
+			(xy 209.55 80.01) (xy 222.25 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d019cad9-26be-40ab-b66a-4b7c9c313d38")
 	)
 	(wire
 		(pts
@@ -5251,6 +5281,82 @@
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
 					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 222.25 73.66)
+		(size 15.24 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "db8bf94d-765f-4f59-abb4-8c868491f98e")
+		(property "Sheetname" "FPGA core"
+			(at 222.25 72.9484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fpga-core.kicad_sch"
+			(at 222.25 89.4846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "1V0" input
+			(at 222.25 76.2 180)
+			(uuid "c7b1f7a7-ddc3-4ea0-a3f5-479ecb53bc67")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "1V8" input
+			(at 222.25 80.01 180)
+			(uuid "7076015b-4718-47ac-afff-1b002d08b4ba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "3V3" input
+			(at 222.25 83.82 180)
+			(uuid "d6daaec3-44ba-43e4-a678-8e0adad89eaf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
+					(page "3")
 				)
 			)
 		)
