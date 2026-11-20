@@ -151,3 +151,5 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-20 | D-019, D-020: sheet 3 FPGA core drawn (power pins, decoupling, flash boot, clock, I/O plan); XC7S25 symbol and footprint added to hardware/. |
 | 2026-11-20 | D-021: sheet 4 sensors drawn (LSM6DSO, TMP117, ADS131M04, three CT inputs); Ultra Librarian symbols and footprints added to hardware/. |
 | 2026-11-20 | D-022: sheet 5 communications drawn (RS-485, CAN FD, ESP32-C3 BLE); THVD1410, TCAN1042V and Espressif symbol libraries added to hardware/. |
+| 2026-11-20 | D-023: sheet 6 programmer drawn (USB-C, ESD, AP2112K LDO, FT2232HL with JTAG on channel A and UART on channel B); JTAG now wired to FPGA core at root. |
+| 2026-11-20 | D-024: sheet 7 test points drawn (rails, grounds, eight key signals). |

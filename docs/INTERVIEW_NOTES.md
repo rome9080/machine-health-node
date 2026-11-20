@@ -135,3 +135,12 @@ Strapping pins decide the boot mode at power-up. High on IO2, IO8 and IO9 gives 
 **What did you learn?**
 Decoupling capacitors and pull-ups can be drawn as separate groups tied to the rails by labels, which keeps wires short and the sheet readable. I also verified connectivity by listing the net of every pin, not only by eye.
 
+
+## Sheet 6: USB-C and programmer
+- Why an FT2232H: one USB cable gives both JTAG (programming the FPGA) and a UART (talking to the CPU), so the board needs no external programmer.
+- Why a separate LDO for the USB chip: VBUS is noisy and 5 V; the FT2232H wants a clean 3.3 V on its USB side, while its I/O voltage (VCCIO) follows the board 3V3 so signals match the FPGA.
+- CC pins need 5.1k to ground or a USB-C host will not turn VBUS on.
+- ESD part (USBLC6) sits next to the connector because that is where static enters.
+
+## Sheet 7: test points
+- Bring-up is faster with probe points on every rail and the signals you would scope first (ADC data-ready, clock, UART).
