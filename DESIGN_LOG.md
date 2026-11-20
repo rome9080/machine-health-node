@@ -122,6 +122,12 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 - **Open:** verify VREFP/VREFN against UG480; -C vs -I grade; real 100 MHz oscillator part; bank swaps at layout; no-connect flags on spare pins at the end of Phase 2.
 - **Status:** Drawn 2026-11-20
 
+## D-021: Sheet 4 sensors
+- **Choice:** LSM6DSO accelerometer on SPI (mode: SDx/SCx grounded, VDD and VDDIO on 3V3, 100 nF + 10 uF on VDD, 100 nF on VDDIO). TMP117 on I2C (ADD0 to GND, 100 nF, 4.7k pull-ups on SDA, SCL, ALERT). ADS131M04 on SPI (AVDD and DVDD 1 uF each, CAP pin 220 nF to GND, SYNC/RESET pulled up 10k and driven by the FPGA, unused AIN3 pair to GND, CLKIN 8.192 MHz from the FPGA). Three current-clamp inputs: 2-pin header, 33 ohm burden across the leads, 1k in series on each lead, 10 nF across the filtered pair. Signals connect by global labels; 3V3 enters through one hierarchical pin.
+- **Reason:** the 33 ohm burden turns a 50 mA CT secondary into about 1.65 V peak for the ADC; the 1k + 10 nF pair is the anti-alias filter. The ADS131M04 samples all channels at the same instant, which is what real-power measurement needs.
+- **Open:** CT clamp part (100 A : 50 mA assumed) and burden value; ESD/TVS on the clamp inputs; decoupling values against the final datasheets at the review.
+- **Status:** Drawn 2026-11-20
+
 ## Open decisions
 
 - None blocking Phase 2. Still candidates, to confirm while drawing the schematic: ESP32-C3-MINI-1, TMP117, QSPI flash, clock, USB bridge chip, CT clamps.
@@ -137,3 +143,4 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-19 | D-017: sheet 1 buck converter drawn, TI symbol and footprint added to hardware/. |
 | 2026-11-19 | D-018: sheet 2 FPGA rails (three TPS62067 converters) drawn, TI symbol and footprint added to hardware/. |
 | 2026-11-20 | D-019, D-020: sheet 3 FPGA core drawn (power pins, decoupling, flash boot, clock, I/O plan); XC7S25 symbol and footprint added to hardware/. |
+| 2026-11-20 | D-021: sheet 4 sensors drawn (LSM6DSO, TMP117, ADS131M04, three CT inputs); Ultra Librarian symbols and footprints added to hardware/. |

@@ -5286,6 +5286,62 @@
 		)
 	)
 	(sheet
+		(at 254 73.66)
+		(size 15.24 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b51317c6-de3e-439d-92cc-921810dd29b7")
+		(property "Sheetname" "Sensors"
+			(at 254 72.9484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sensors.kicad_sch"
+			(at 254 89.4846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 254 83.82 180)
+			(uuid "8bb904f6-e9f0-46bc-91b5-48376b206b2d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 222.25 73.66)
 		(size 15.24 15.24)
 		(exclude_from_sim no)
@@ -5360,6 +5416,52 @@
 				)
 			)
 		)
+	)
+	(junction
+		(at 213.36 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94a92495-3a2c-40a6-a260-8d8c9f2462ad")
+	)
+	(wire
+		(pts
+			(xy 213.36 83.82) (xy 213.36 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9e3e1ecd-58de-4686-9ecb-a110bd05cda3")
+	)
+	(wire
+		(pts
+			(xy 213.36 92.71) (xy 246.38 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2831603-89e5-429f-ab5d-030b49cb4638")
+	)
+	(wire
+		(pts
+			(xy 246.38 92.71) (xy 246.38 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daee7417-d69b-448e-866d-8ac3ba912043")
+	)
+	(wire
+		(pts
+			(xy 246.38 83.82) (xy 254 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4c16340-1202-4955-8c47-7fa5ae48cf65")
 	)
 	(sheet_instances
 		(path "/"

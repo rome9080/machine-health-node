@@ -89,3 +89,20 @@ The Ultra Librarian symbol typed the ground pins as power outputs, so ERC report
 **Why global labels for the signals and hierarchical pins for power?**
 About 40 peripheral signals would need 40 sheet pins on the root page. Global labels connect by name across sheets. Power rails stay hierarchical so the power path is visible on the root page.
 
+## Sheet 4: Sensors (vibration, temperature, motor current)
+
+**Why a 33 ohm burden resistor on the clamp?**
+A current transformer outputs a small current, up to 50 mA for 100 A on the clamp. The ADC measures voltage, so the burden resistor converts current to voltage: 50 mA x 33 ohm is about 1.65 V peak, which fits the ADC's input range.
+
+**What do the 1k resistors and the 10 nF capacitor do?**
+They form a low-pass filter in front of the ADC. It removes noise above the band I care about, so high-frequency interference does not alias into the readings.
+
+**Why the ADS131M04?**
+It has four simultaneous-sampling 24-bit channels. Simultaneous means all channels are sampled at the same instant, which is needed to calculate real power from voltage and current later. Three channels are used for clamps and one is a spare.
+
+**Why SPI for the accelerometer and I2C for the temperature sensor?**
+The vibration data needs high sample rates, so SPI. Temperature changes slowly and I2C needs only two wires; the pull-ups (4.7k) are required because I2C lines are open-drain.
+
+**What went wrong and what did you learn?**
+I first wired the LSM6DSO decoupling capacitors in series with the supply, which would have left the chip unpowered. A decoupling capacitor goes from the supply to ground beside the supply line, never in the path. Also the sheet's 3V3 labels were local, so the sheet had no real connection to the 3V3 rail until I added a hierarchical pin. ERC cannot catch that, so I checked what feeds each net by reading the connections.
+
