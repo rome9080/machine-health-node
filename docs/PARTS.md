@@ -47,3 +47,33 @@ Looked up each major part on LCSC and JLCPCB (same part numbers, JLCPCB assemble
 Not yet checked: USBLC6-2SC6, 100 MHz oscillator, inductors, TVS, fuse, MOSFET, LEDs, switches, connectors and the passives (resistors and capacitors are usually basic parts).
 
 Three things to decide from this check: the FPGA stock is the thinnest (consider the -I variant or ordering parts early), and the ESP32-C3-MINI-1-N4 and FT2232HL are both flagged as not recommended for new designs. They still work and are stocked, but note it in the write-up as a known sourcing risk.
+
+## Remaining parts (sourcing check part 2, 2026-11-21)
+
+Same caveat as above: part numbers are real, but I could not confirm current stock for every one, so check the JLCPCB BOM tool before ordering. "Basic" parts carry no extra JLCPCB setup fee; "Extended" parts do.
+
+| Ref | Part | LCSC / JLCPCB # | Class | Notes |
+|-----|------|-----------------|-------|-------|
+| Y1 | 100 MHz 3.3 V CMOS oscillator, 3.2x2.5 mm, 4-pin | C437136 (JGHC, 25 ppm) or C4353707 (YXC OT3225100MJBA4SL, 1.8 to 3.3 V) | Extended | Schematic still has a DIP-14 placeholder. Needs a 4-pin symbol (EN, GND, OUT, VDD) and a 3225 footprint. Avoid the LVDS/HCSL/LVPECL variants that came up in the search, since the FPGA clock pin expects single-ended CMOS |
+| Y2 | 12 MHz crystal, 5032, 20 pF | C114436 (YXC X503212MSD2GI) or C6071568 (SST, 894 seen) | Not confirmed | The 27 pF load caps plus board stray capacitance give about 17 to 19 pF, close to the 20 pF the crystal wants. Re-check against the FT2232H datasheet |
+| U14 | USBLC6-2SC6 | C7519 (ST original) | Extended | Cheap clones also exist (C2687116, C2827654) |
+| D1 | SMBJ36CA TVS | C330067 (Jiejie) or C117600 | Extended | Many equivalent makers, all listed at fractions of a cent |
+| D2 | BZT52C12 12 V zener | C353560 (6,450 seen) or C43491 | Not confirmed | Fine |
+| D3-D6 | 0603 LEDs | Red C2286 (KT-0603R) | Basic | Yellow C2287 and blue C2288 are Extended. Colours not yet fixed in the schematic |
+| Q1 | AO3401A P-channel MOSFET | C15127 (AOS original) | Basic | Gate limit is 12 V, so check that D2 clamps the gate on the real input range |
+| L1 | 10 uH, 5x5 mm | C222949 (NRS5040T100MMGJ, 2.1 A) or C223066 (NR5040T100M) | Not confirmed | Footprint matches the NR50xx family. Saturation current still to check against the LMR36015 peak current |
+| L2, L4, L5 | 1 uH, 3x3 mm | Candidates: C3221188 (TDK SPM3012T-1R0M-CA), C5997619 (TDK VLS3015CX-1R0M-H, 2.3 A), C22395445 (ABC, 2.1 A) | Extended | Most cheap 1 uH 3x3 parts saturate near 1.4 to 2.8 A. Pick against the TPS62067 current limit before ordering |
+| F1 | 2 A resettable fuse, 1206 | C883135 (BHFUSE BSMD1206-200-12V) | Extended | **Open issue.** The common 2 A 1206 fuses (C883134, C2931955, C2892426) are rated for only 6 V. The input has a 36 V TVS, so the fuse needs a voltage rating that matches the real input range |
+| SW1, SW2 | 6x6x5 mm tactile switch | C319409 (1TS009A-1800-5000-CT) or C255813 / C255814 / C319411 (other force options) | Not confirmed | Matches the 1TS009 footprint chosen in KiCad |
+| C1 | 10 uF 50 V 1206 | C303950 (FH 1206B106K500NT, X7R) | Extended | Ceramic capacitance drops a lot under DC bias, so effective value at 12 V or more will be well below 10 uF |
+| C 0.47 uF 0402 | 470 nF 6.3 V X5R | C364319 (Samsung) or C469626 (Yageo) | Not confirmed | 14 of these on the board |
+| J11 | USB4105-GF-A | C3020560 (0 stock at LCSC on one page) | Extended | The -120 variant (C5184243) showed 1,892 at JLCPCB. JLCPCB flags assembly difficulty as high for it |
+| J1-J10 | Screw terminal and pin headers | not looked up | n/a | Through-hole. JLCPCB's normal service does not place these, so plan to hand-solder them or pay extra |
+
+Not checked: the other capacitor values (10 uF 0805, 22 uF 0805, 4.7 uF 0603, 3.3 uF 0603, 1 uF, 100 nF, 10 nF, 22/27/51/10 pF) and all resistor values. Standard values are usually in the JLCPCB basic library, so the BOM tool will confirm these in one upload at the end of Phase 4.
+
+### New issues this pass raised (to settle in the design decisions step)
+1. F1 voltage rating (see above).
+2. Y1 needs a real symbol and footprint.
+3. Inductor saturation currents for L1, L2, L4, L5.
+4. Gate voltage limit of Q1 against the input range.
