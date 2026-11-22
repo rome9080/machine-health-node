@@ -260,7 +260,24 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1651000|660400|d41d74a9-e2f6-4b29-98a2-17edaf34907f|247a8524-c083-4305-b140-5443d04855be|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7",
+        ""
+      ],
+      [
+        "pin_to_pin|2260600|660400|247a8524-c083-4305-b140-5443d04855be|0cdefb82-f70a-4ebc-bee4-6f8906699ab8|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f",
+        ""
+      ],
+      [
+        "pin_to_pin|457200|749300|9ea2e986-29e5-4afb-a406-10b54c40ef15|7457a53e-05c0-4a20-8eeb-393b69b7afc7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7",
+        ""
+      ],
+      [
+        "pin_to_pin|457200|774700|7457a53e-05c0-4a20-8eeb-393b69b7afc7|d41d74a9-e2f6-4b29-98a2-17edaf34907f|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7|/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/b51317c6-de3e-439d-92cc-921810dd29b7",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -669,7 +686,7 @@
         "uuid": "6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f"
       }
     ],
-    "used_designators": "L2-5,#PWR1-27,R5-16,#FLG1-8,C6-17,U2-5",
+    "used_designators": "D3-6,L2-5,#PWR1-76,J2-6,#FLG1-8,R5-36,C6-48,U2-9,SW1-2,Y1",
     "variants": []
   },
   "sheets": [
@@ -680,6 +697,26 @@
     [
       "0f64b08b-7c6d-4af9-8fb6-384b3b3f40c1",
       "FPGA rails"
+    ],
+    [
+      "db8bf94d-765f-4f59-abb4-8c868491f98e",
+      "FPGA core"
+    ],
+    [
+      "b51317c6-de3e-439d-92cc-921810dd29b7",
+      "Sensors"
+    ],
+    [
+      "c291776e-2734-4fea-aecb-4502c68d6d36",
+      "Comms"
+    ],
+    [
+      "7f18fb88-9d5e-421e-be88-05fde6654c72",
+      "Programmer"
+    ],
+    [
+      "228839a7-e04a-4a5a-934f-ee25bf40afbd",
+      "Test points"
     ]
   ],
   "text_variables": {},

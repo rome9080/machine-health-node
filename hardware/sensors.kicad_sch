@@ -3677,17 +3677,6 @@
 		)
 		(uuid "d8612c56-7922-4b97-afe2-bf1d93d039e9")
 	)
-	(hierarchical_label "3V3"
-		(shape input)
-		(at 137.16 62.23 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ab8a7711-c766-4f3b-a63c-8d4ddb7e6682")
-	)
 	(label "3V3"
 		(at 24.13 73.66 180)
 		(effects
@@ -4218,6 +4207,17 @@
 			)
 		)
 	)
+	(hierarchical_label "3V3"
+		(shape input)
+		(at 137.16 62.23 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ab8a7711-c766-4f3b-a63c-8d4ddb7e6682")
+	)
 	(symbol
 		(lib_id "Device:C")
 		(at 100.33 85.09 0)
@@ -4251,7 +4251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 101.2952 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4333,7 +4333,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 108.9152 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -4413,7 +4413,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 161.29 62.5348 0)
 			(hide yes)
 			(show_name no)
@@ -4495,7 +4495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 130.302 120.65 90)
 			(hide yes)
 			(show_name no)
@@ -4577,7 +4577,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 46.6852 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -4738,7 +4738,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 59.182 162.56 90)
 			(hide yes)
 			(show_name no)
@@ -5053,7 +5053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PW20_TEX"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 127 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -5211,7 +5211,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PW20_TEX"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 176.53 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -5448,7 +5448,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV0006B"
+		(property "Footprint" "TMP117:DRV0006B"
 			(at 68.58 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -5544,7 +5544,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 193.802 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -5626,7 +5626,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 179.832 121.92 90)
 			(hide yes)
 			(show_name no)
@@ -5708,7 +5708,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 157.1752 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -5790,7 +5790,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 256.2352 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -6266,7 +6266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 25.0952 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -6346,7 +6346,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 254 67.6148 0)
 			(hide yes)
 			(show_name no)
@@ -6428,7 +6428,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 144.272 134.62 90)
 			(hide yes)
 			(show_name no)
@@ -6510,7 +6510,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 130.302 147.32 90)
 			(hide yes)
 			(show_name no)
@@ -6592,7 +6592,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 243.332 135.89 90)
 			(hide yes)
 			(show_name no)
@@ -6674,7 +6674,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 43.942 162.56 90)
 			(hide yes)
 			(show_name no)
@@ -6754,7 +6754,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LGA-14L_2P5X3X0P86_STM"
+		(property "Footprint" "LSM6DSO:LGA-14L_2P5X3X0P86_STM"
 			(at 45.72 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -6874,7 +6874,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 179.832 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -7033,7 +7033,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 238.76 62.5348 0)
 			(hide yes)
 			(show_name no)
@@ -7113,7 +7113,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PW20_TEX"
+		(property "Footprint" "ADS131M04:PW20_TEX"
 			(at 165.1 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7251,7 +7251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 229.362 121.92 90)
 			(hide yes)
 			(show_name no)
@@ -7330,7 +7330,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PW20_TEX"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 226.06 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -7491,7 +7491,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.882 162.56 90)
 			(hide yes)
 			(show_name no)
@@ -7731,7 +7731,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 206.7052 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7813,7 +7813,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 229.362 148.59 90)
 			(hide yes)
 			(show_name no)
@@ -7892,7 +7892,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 135.382 68.58 90)
 			(hide yes)
 			(show_name no)

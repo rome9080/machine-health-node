@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "8697d5af-38d9-419b-bbb0-e7811859a41b")
+	(uuid "d4f80244-2833-4aab-a171-d1407959b3e1")
 	(paper "A4")
 	(lib_symbols
 		(symbol "2026-11-20_02-18-59:TPS62067DSGR"
@@ -2061,7 +2061,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 66.802 109.22 90)
 			(hide yes)
 			(show_name no)
@@ -2222,7 +2222,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 169.672 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -2301,7 +2301,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RNX0012B"
+		(property "Footprint" "Inductor_SMD:L_Taiyo-Yuden_NR-30xx"
 			(at 110.49 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -2383,7 +2383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 172.4152 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -2540,7 +2540,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RNX0012B"
+		(property "Footprint" "Inductor_SMD:L_Taiyo-Yuden_NR-30xx"
 			(at 189.23 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -2855,7 +2855,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 145.542 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -2937,7 +2937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 148.2852 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -3097,7 +3097,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 50.292 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -3257,7 +3257,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 62.992 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -3339,7 +3339,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 41.6052 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -3421,7 +3421,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 65.7352 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -3581,7 +3581,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 159.7152 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -3663,7 +3663,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 69.5452 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -3824,7 +3824,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 156.972 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -3906,7 +3906,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 78.232 109.22 90)
 			(hide yes)
 			(show_name no)
@@ -3985,7 +3985,7 @@
 				)
 			)
 		)
-		(property "Footprint" "RNX0012B"
+		(property "Footprint" "Inductor_SMD:L_Taiyo-Yuden_NR-30xx"
 			(at 82.55 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -4067,7 +4067,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 90.932 109.22 90)
 			(hide yes)
 			(show_name no)
@@ -4147,7 +4147,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DSG0008A"
+		(property "Footprint" "TPS62067:DSG0008A"
 			(at 57.15 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -4485,7 +4485,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DSG0008A"
+		(property "Footprint" "TPS62067:DSG0008A"
 			(at 163.83 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -4590,7 +4590,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 93.6752 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -4670,7 +4670,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DSG0008A"
+		(property "Footprint" "TPS62067:DSG0008A"
 			(at 85.09 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -5008,7 +5008,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 38.862 22.86 90)
 			(hide yes)
 			(show_name no)
@@ -5090,7 +5090,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 53.0352 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -5172,7 +5172,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 80.9752 129.54 0)
 			(hide yes)
 			(show_name no)

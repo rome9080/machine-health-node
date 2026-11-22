@@ -1,0 +1,11 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "LMR36015")(type "KiCad")(uri "${KIPRJMOD}/ul_LMR36015ARNXR/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "TPS62067")(type "KiCad")(uri "${KIPRJMOD}/ul_TPS62067DSGR/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "XC7S25")(type "KiCad")(uri "${KIPRJMOD}/XC7S25_1CSGA225C/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "LSM6DSO")(type "KiCad")(uri "${KIPRJMOD}/ul_LSM6DSOTR/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "TMP117")(type "KiCad")(uri "${KIPRJMOD}/ul_TMP117AIDRVR/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "ADS131M04")(type "KiCad")(uri "${KIPRJMOD}/ul_ADS131M04IPWR/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "THVD1410")(type "KiCad")(uri "${KIPRJMOD}/ul_THVD1410D/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "TCAN1042")(type "KiCad")(uri "${KIPRJMOD}/ul_TCAN1042VDQ1/KiCADv6/footprints.pretty")(options "")(descr ""))
+)

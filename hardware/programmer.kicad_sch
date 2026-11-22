@@ -3385,6 +3385,12 @@
 		(uuid "ac954ca5-e6ee-4b7c-aef4-33efd24a1277")
 	)
 	(junction
+		(at 157.48 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b523f3ac-0e75-4f8d-a336-6e22273c5594")
+	)
+	(junction
 		(at 54.61 134.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3943,6 +3949,16 @@
 			(type default)
 		)
 		(uuid "4b87be8f-a0a0-42f1-a843-83d35effaf7f")
+	)
+	(wire
+		(pts
+			(xy 157.48 26.67) (xy 162.56 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c0aab18-31a7-48a7-ade8-53ecdda9cc15")
 	)
 	(wire
 		(pts
@@ -5427,7 +5443,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 50.8 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -5509,7 +5525,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 193.04 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -6078,7 +6094,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 91.44 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -6158,7 +6174,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Crystal:Crystal_SMD_5032-2Pin_5.0x3.2mm"
 			(at 170.18 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -6318,7 +6334,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 213.36 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -6400,7 +6416,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 71.12 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -6560,7 +6576,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 71.12 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -6796,7 +6812,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
 			(at 139.7 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -6923,7 +6939,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 152.4 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -7429,7 +7445,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 50.8 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -7834,7 +7850,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 193.04 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -7916,7 +7932,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 152.4 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -7998,7 +8014,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 172.72 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -8125,6 +8141,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 162.56 26.67 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "be4103ff-d849-4ae2-82a1-8ef2c34ef59f")
+		(property "Reference" "#FLG14"
+			(at 162.56 28.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 162.56 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 162.56 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "66dd00d6-d4b4-4c68-b91b-44412722cc71")
+		)
+		(instances
+			(project "machine-health-node"
+				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/7f18fb88-9d5e-421e-be88-05fde6654c72"
+					(reference "#FLG14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 172.72 165.1 0)
 		(unit 1)
@@ -8158,7 +8252,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 172.72 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -8240,7 +8334,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 111.76 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -8322,7 +8416,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 132.08 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -8638,7 +8732,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 91.44 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -8798,7 +8892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 213.36 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -8958,7 +9052,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 30.48 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -9118,7 +9212,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 30.48 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -9278,7 +9372,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 132.08 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -9438,7 +9532,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 111.76 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -9481,100 +9575,6 @@
 			(project "machine-health-node"
 				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/7f18fb88-9d5e-421e-be88-05fde6654c72"
 					(reference "C66")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 157.48 26.67) (xy 162.56 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c0aab18-31a7-48a7-ade8-53ecdda9cc15")
-	)
-	(junction
-		(at 157.48 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b523f3ac-0e75-4f8d-a336-6e22273c5594")
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 162.56 26.67 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "be4103ff-d849-4ae2-82a1-8ef2c34ef59f")
-		(property "Reference" "#FLG14"
-			(at 162.56 28.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 162.56 31.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 162.56 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 162.56 26.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "66dd00d6-d4b4-4c68-b91b-44412722cc71")
-		)
-		(instances
-			(project "machine-health-node"
-				(path "/6b9f84ae-fcd5-4cb0-b72d-b4dccbb05a9f/7f18fb88-9d5e-421e-be88-05fde6654c72"
-					(reference "#FLG14")
 					(unit 1)
 				)
 			)
