@@ -16,7 +16,7 @@ Status key: **Chosen** = picked after checking manufacturer or distributor pages
 | FPGA configuration flash | 64 Mbit QSPI flash (for example W25Q64) | Not checked. Confirm the bitstream size fits | Candidate |
 | Clock | 100 MHz oscillator | Not checked | Candidate |
 | USB and programming | USB-C with onboard USB-JTAG and UART bridge (FT2232H class) | Not checked. See open decision O-1 | Candidate |
-| Current sensors | Split-core CT clamps with voltage output, burden sized for fan current | Not selected | To pick |
+| Current sensors | Split-core CT clamps, current output (SCT-013-000, 100 A : 50 mA, YHDC), plugged in off-board, not assembled by JLCPCB. The board has a 33 ohm burden resistor per channel (R26, R32, R35), so a voltage-output clamp (e.g. SCT-013-005) must NOT be used | Chosen (SCT-013-000), buy separately |
 
 ## Notes
 

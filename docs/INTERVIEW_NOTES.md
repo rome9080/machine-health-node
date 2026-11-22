@@ -92,7 +92,7 @@ About 40 peripheral signals would need 40 sheet pins on the root page. Global la
 ## Sheet 4: Sensors (vibration, temperature, motor current)
 
 **Why a 33 ohm burden resistor on the clamp?**
-A current transformer outputs a small current, up to 50 mA for 100 A on the clamp. The ADC measures voltage, so the burden resistor converts current to voltage: 50 mA x 33 ohm is about 1.65 V peak, which fits the ADC's input range.
+A current transformer outputs a small current, up to 50 mA for 100 A on the clamp. The ADC measures voltage, so the burden resistor converts current to voltage: the clamp's 50 mA at 100 A is an RMS value, so 50 mA x 33 ohm is 1.65 V RMS, about 2.3 V peak, which is above the ADC's +/-1.2 V range. The channel therefore clips above about 51 A RMS (1.2 V / 33 ohm = 36 mA peak). That is fine for a fan drawing about 1 A. To cover the full 100 A, the burden would be 16.9 ohm or less. I use the current-output clamp because the burden is then on my board, so I choose the voltage scaling.
 
 **What do the 1k resistors and the 10 nF capacitor do?**
 They form a low-pass filter in front of the ADC. It removes noise above the band I care about, so high-frequency interference does not alias into the readings.

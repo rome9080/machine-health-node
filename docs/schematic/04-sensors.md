@@ -22,4 +22,4 @@ Measures vibration (LSM6DSO), board temperature (TMP117) and motor current on th
 The board never touches mains. Current is measured only with split-core clamp CTs, which isolate the board from the conductor.
 
 ## Open items
-CT clamp part and burden value (100 A : 50 mA assumed); ESD/TVS on the clamp inputs; ADC clock source frequency confirmed at firmware stage.
+CT clamp chosen: SCT-013-000 (100 A : 50 mA, current output). 33 ohm burden clips above about 51 A RMS, fine for the demo fan; ESD/TVS on the clamp inputs; ADC clock source frequency confirmed at firmware stage.
