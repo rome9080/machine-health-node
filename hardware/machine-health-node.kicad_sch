@@ -1652,7 +1652,7 @@
 							)
 						)
 					)
-					(number "D"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1670,7 +1670,7 @@
 							)
 						)
 					)
-					(number "G"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1688,7 +1688,7 @@
 							)
 						)
 					)
-					(number "S"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4691,13 +4691,13 @@
 				)
 			)
 		)
-		(pin "G"
+		(pin "1"
 			(uuid "7b09aae7-4f1f-4a9a-aff3-30b43e37f3d6")
 		)
-		(pin "S"
+		(pin "2"
 			(uuid "82358f83-80c4-4f2a-bb7e-aa8b8c71ddc5")
 		)
-		(pin "D"
+		(pin "3"
 			(uuid "a7902871-ed87-4654-9bcf-7d48309e4364")
 		)
 		(instances
