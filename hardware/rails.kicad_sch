@@ -2291,7 +2291,7 @@
 				)
 			)
 		)
-		(property "Value" "1uH"
+		(property "Value" "1uH 2.3A"
 			(at 110.744 150.368 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2530,7 +2530,7 @@
 				)
 			)
 		)
-		(property "Value" "1uH"
+		(property "Value" "1uH 2.3A"
 			(at 189.484 64.008 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3975,7 +3975,7 @@
 				)
 			)
 		)
-		(property "Value" "1uH"
+		(property "Value" "1uH 2.3A"
 			(at 82.804 64.008 90)
 			(show_name no)
 			(do_not_autoplace no)

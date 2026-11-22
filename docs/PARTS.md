@@ -77,3 +77,17 @@ Not checked: the other capacitor values (10 uF 0805, 22 uF 0805, 4.7 uF 0603, 3.
 2. Y1 needs a real symbol and footprint.
 3. Inductor saturation currents for L1, L2, L4, L5.
 4. Gate voltage limit of Q1 against the input range.
+
+## Fixes applied to the schematic (2026-11-21)
+
+Decisions: board input is 12 V nominal, designed to survive up to 24 V (the 36 V TVS stays).
+
+| Ref | Change | Why |
+|-----|--------|-----|
+| F1 | Value now "2A 63V". Part: Walter 1206T2A63V (C354895), a standard (non-resettable) 1206 fuse rated 63 V DC, 50 A interrupt. Footprint unchanged | The resettable 2 A 1206 parts found earlier are 6 V devices |
+| D2 | Value now "10V". Part: BZT52C10 (C2103, 9.4 to 10.6 V). Footprint unchanged | The 12 V zener spans 11.4 to 12.7 V, which can go above the 12 V gate limit I recall for the AO3401A (from memory, not checked against the datasheet in this pass). The 100 k gate resistor only passes about 0.14 mA at 24 V, so the zener is not stressed |
+| Y1 | Symbol pins renumbered 1 (NC/EN), 2 GND, 3 OUT, 4 Vcc. Footprint now Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm. Part: C437136 or C4353707 | The old DIP-14 footprint could not be a 3.2x2.5 mm part. Pin 1 is left unconnected with its no-connect flag; check pin 1 in the chosen part's datasheet before ordering (many 3225 parts use it as an output-enable with an internal pull-up) |
+| L2, L4, L5 | Value now "1uH 2.3A". Part: TDK VLS3015CX-1R0M-H (C5997619, Isat 2.3 A) | TPS62067 current limit is 2.3 A minimum, 2.75 A typical, 3.3 A maximum. TI says the conservative choice is to rate the inductor for the current limit. This part meets the minimum but not the maximum, which is acceptable only if each rail's load stays well under 1 A (not yet checked against a power budget) |
+| L1 | Value now "10uH 2.1A". Part unchanged (NRS5040T100MMGJ, 2.1 A) | LMR36015 high-side current limit is 2.0 to 2.8 A. The inductor saturates below the typical limit, so this is acceptable only if the 5 V load stays around 1.2 A or less. Part of the open 5 V load decision |
+
+Footprint of L2, L4, L5 is the 3x3 mm NR-30xx pattern, and the TDK part is 3.0 x 3.0 x 1.5 mm. Confirm pad fit when the layout starts.

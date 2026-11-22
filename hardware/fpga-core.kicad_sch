@@ -5813,7 +5813,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Oscillator:ACO-xxxMHz"
+		(symbol "Oscillator:ASE-xxxMHz"
 			(pin_names
 				(offset 0.254)
 			)
@@ -5833,7 +5833,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "ACO-xxxMHz"
+			(property "Value" "ASE-xxxMHz"
 				(at 1.27 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5844,7 +5844,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm"
 				(at 11.43 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5866,7 +5866,7 @@
 					)
 				)
 			)
-			(property "Description" "HCMOS Crystal Clock Oscillator, DIP14-style metal package"
+			(property "Description" "HCMOS Crystal Clock Oscillator, 4-pin SMD 3.2x2.5 mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5888,7 +5888,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Oscillator*DIP*14*"
+			(property "ki_fp_filters" "Oscillator*SMD*4Pin*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5899,7 +5899,7 @@
 					)
 				)
 			)
-			(symbol "ACO-xxxMHz_0_1"
+			(symbol "ASE-xxxMHz_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -5925,7 +5925,7 @@
 					)
 				)
 			)
-			(symbol "ACO-xxxMHz_1_1"
+			(symbol "ASE-xxxMHz_1_1"
 				(pin no_connect line
 					(at -5.08 2.54 0)
 					(length 2.54)
@@ -5955,7 +5955,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5973,7 +5973,7 @@
 							)
 						)
 					)
-					(number "8"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5991,7 +5991,7 @@
 							)
 						)
 					)
-					(number "14"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -16017,7 +16017,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Oscillator:ACO-xxxMHz")
+		(lib_id "Oscillator:ASE-xxxMHz")
 		(at 278.13 195.58 0)
 		(unit 1)
 		(body_style 1)
@@ -16050,7 +16050,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+		(property "Footprint" "Oscillator:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm"
 			(at 289.56 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -16072,7 +16072,7 @@
 				)
 			)
 		)
-		(property "Description" "HCMOS Crystal Clock Oscillator, DIP14-style metal package"
+		(property "Description" "HCMOS Crystal Clock Oscillator, 4-pin SMD 3.2x2.5 mm"
 			(at 278.13 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -16086,13 +16086,13 @@
 		(pin "1"
 			(uuid "80501448-12d3-4079-9ce1-8d17894a2fb6")
 		)
-		(pin "7"
+		(pin "2"
 			(uuid "03a9ea61-df1a-4ccf-9111-3986d3563f7f")
 		)
-		(pin "14"
+		(pin "4"
 			(uuid "beecd218-5c03-44a1-b892-d4c24000e9cf")
 		)
-		(pin "8"
+		(pin "3"
 			(uuid "3385757b-85f2-4d51-ac62-0f36953f76c9")
 		)
 		(instances

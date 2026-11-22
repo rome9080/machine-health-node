@@ -3189,7 +3189,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uH"
+		(property "Value" "10uH 2.1A"
 			(at 146.05 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3270,7 +3270,7 @@
 				)
 			)
 		)
-		(property "Value" "12V"
+		(property "Value" "10V"
 			(at 116.84 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5054,7 +5054,7 @@
 				)
 			)
 		)
-		(property "Value" "2A"
+		(property "Value" "2A 63V"
 			(at 91.44 101.6 90)
 			(show_name no)
 			(do_not_autoplace no)
