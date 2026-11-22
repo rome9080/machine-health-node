@@ -159,3 +159,11 @@ One entry per non-obvious decision: options, choice, reason, status. Figures mar
 | 2026-11-21 | D-028: first JLCPCB/LCSC sourcing check of the main parts. FPGA stock is thin; ESP32-C3-MINI-1-N4 and FT2232HL are flagged not recommended for new designs but are stocked. Details in docs/PARTS.md. |
 | 2026-11-21 | D-029: second sourcing pass covering oscillators, crystal, ESD/TVS, zener, MOSFET, LEDs, inductors, fuse, switches. Raised four issues for the design decisions step: F1 voltage rating (common 2 A 1206 fuses are 6 V parts), Y1 placeholder, inductor saturation current, Q1 gate limit. Details in docs/PARTS.md. |
 | 2026-11-21 | D-030: schematic fixes from the sourcing pass. F1 standard 2 A 63 V fuse, D2 10 V zener, Y1 4-pin SMD footprint with renumbered pins, inductor values updated with saturation current. Input range set as 12 V nominal, 24 V survivable. Details and caveats in docs/PARTS.md. |
+
+## D-031: Power budget (2026-11-21)
+
+Estimated worst-case loads (engineering estimates, not datasheet-verified; the FPGA figure is the least certain): 1V0 about 0.3 A, 1V8 about 0.1 A, 3V3 about 0.6 A (0.8 A with margin), 5V about 0.65 A (0.9 A with margin, includes the three bucks' input draw and the CAN transceiver).
+
+Result: L2, L4, L5 (2.3 A rating) carry about 0.8 A at most on the heaviest rail, so they have about 3x margin against the TPS62067 minimum current limit. L1 (2.1 A rating) sees about 0.9 A against the roughly 1.2 A threshold set in D-030, and the LMR36015 can supply 1.5 A. Inductors stay as chosen.
+
+To do: replace the FPGA estimate with the AMD power estimator figure once the RTL is synthesised, and note it in the write-up.
