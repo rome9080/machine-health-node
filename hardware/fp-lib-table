@@ -8,4 +8,5 @@
 	(lib (name "ADS131M04")(type "KiCad")(uri "${KIPRJMOD}/ul_ADS131M04IPWR/KiCADv6/footprints.pretty")(options "")(descr ""))
 	(lib (name "THVD1410")(type "KiCad")(uri "${KIPRJMOD}/ul_THVD1410D/KiCADv6/footprints.pretty")(options "")(descr ""))
 	(lib (name "TCAN1042")(type "KiCad")(uri "${KIPRJMOD}/ul_TCAN1042VDQ1/KiCADv6/footprints.pretty")(options "")(descr ""))
+	(lib (name "PCM_Espressif")(type "KiCad")(uri "${KIPRJMOD}/Espressif.pretty")(options "")(descr ""))
 )
